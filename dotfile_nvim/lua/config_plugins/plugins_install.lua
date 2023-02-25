@@ -25,6 +25,8 @@ packer.startup({
     --------------------- Other --------------------
     -- nvim-treesitter
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+    -- nvim
+    use({ 'phaazon/hop.nvim', branch = 'v2'})
     -- 主题
     use("overcache/neosolarized")
     -- accelerated-jk
