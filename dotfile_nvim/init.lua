@@ -15,9 +15,15 @@ else
     -- telescope
   require('config_plugins.telescope')
     -- auto pair
+  require('config_plugins.auto_pair')
     -- surround
+  require('config_plugins.surround')
+    -- comment
+  require('config_plugins.comment')
     -- nvim-treesitter
   require('config_plugins.nvim_treesitter')
+    -- hop
+  require('config_plugins.hop')
   -- 主题设置
   require('config_general.colorscheme')
 
