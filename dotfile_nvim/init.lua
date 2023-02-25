@@ -3,6 +3,7 @@ if vim.g.vscode then
   require('vscode_nvim.vs-jk')
   -- require('vscode_nvim.vs-leap')
   require('vscode_nvim.vs-keybinding')
+  require('vscode_nvim.vs-hop')
 else
   -- 基本配置
   require('config_general.basic')
