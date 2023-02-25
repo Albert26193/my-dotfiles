@@ -1,7 +1,7 @@
 if vim.g.vscode then
   require('vscode_nvim.vs-basic')
   require('vscode_nvim.vs-jk')
-  require('vscode_nvim.vs-leap')
+  -- require('vscode_nvim.vs-leap')
   require('vscode_nvim.vs-keybinding')
 else
   -- 基本配置

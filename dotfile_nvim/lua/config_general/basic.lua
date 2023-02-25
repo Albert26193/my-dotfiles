@@ -11,7 +11,7 @@ vim.wo.number = true
 -- vim.wo.relativenumber = false
 
 -- 高亮所在行
--- vim.wo.cursorline = true
+vim.wo.cursorline = true
 
 -- 显示左侧图标指示列
 vim.wo.signcolumn = "yes"

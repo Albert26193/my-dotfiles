@@ -32,7 +32,7 @@ packer.startup({
     -- accelerated-jk
     use {'rainbowhxch/accelerated-jk.nvim'}
     -- leap
-    use {'ggandor/leap.nvim'}
+    -- use {'ggandor/leap.nvim'}
     -- -- telescope
     use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" }, })
     -- surround
