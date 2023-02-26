@@ -31,9 +31,9 @@ packer.startup({
     use("overcache/neosolarized")
     -- accelerated-jk
     use {'rainbowhxch/accelerated-jk.nvim'}
-    -- leap
-    -- use {'ggandor/leap.nvim'}
-    -- -- telescope
+     -- indent-blankline
+    use("lukas-reineke/indent-blankline.nvim")
+    -- telescope
     use({ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" }, })
     -- surround
     use("ur4ltz/surround.nvim")

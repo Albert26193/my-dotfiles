@@ -25,6 +25,9 @@ else
   require('config_plugins.nvim_treesitter')
     -- hop
   require('config_plugins.hop')
+    -- indent_blankline
+  require('config_plugins.indent_blankline')
+
   -- 主题设置
   require('config_general.colorscheme')
 
