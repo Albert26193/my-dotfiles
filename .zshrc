@@ -28,46 +28,42 @@ alias "python"="python3"
 alias "pip"="pip3"
 alias "sc"="ssh albert@aliyun0605"
 alias "tm"="tmux"
-alias "ll"="exa -a"
+alias "ll"="ls -a"
 
 #  -------------------- function --------------------
-#!/bin/bash
-function proxy_on() {
-  export http_proxy="http://127.0.0.1:7890"
-  export https_proxy="http://127.0.0.1:7890"
-  echo -e "already turn on the proxy"
-  curl cip.cc
-}
 
-function proxy_off() {
-  unset http_proxy
-  unset https_proxy
-  echo -e "proxy turn off"
-  curl cip.cc
-}
+my_scripts_dir="/Users/albert/my_script/"
+my_scripts=("script_man/man_to_nvim.sh" 
+            "script_waque/waque_upload.sh"
+            "script_out/out_go.sh")
 
-function weather() {
-  curl 'wttr.in/{Shanghai, Yancheng}?format=4'
-}
+for single_script in "${my_scripts[@]}"; do
+  current_script="${my_scripts_dir}${single_script}"
+  if [[ ! -f ${current_script} ]]; then
+    echo "${current_script} does not exist"
+  else
+    source "${current_script}"
+  fi
+done
 
 function cc() {
   cd ${1}
-  currentPath=$(pwd)
-  normalFileNum=$(ls -al| grep "^-"| wc -l| tr -d ' ')
-  dirFileNum=`ls -al| grep "^d"| wc -l| tr -d ' '`
+  local currentPath=$(pwd)
+  local normalFileNum=$(ls -al| grep "^-"| wc -l| tr -d ' ')
+  local dirFileNum=`ls -al| grep "^d"| wc -l| tr -d ' '`
   # totalNum=`expr ${normalFileNum} + ${dirFileNum}`
-  totalNum=$(( ${normalFileNum} + ${dirFileNum}))
+  local totalNum=$(( ${normalFileNum} + ${dirFileNum}))
   echo -e "\e[33m current path is: ${currentPath} \e[0m"
   echo -e "\e[35m total: ${totalNum} \e[0m"
 
   if [ ${totalNum} -le 15 ]
   then
-    exa -al
+    ls -al
   elif [ ${totalNum} -ge 51 ]
   then
     echo "files in current directory is more than 50"
   else 
-    exa -a
+    ls -a
   fi
 }
 
@@ -102,12 +98,12 @@ function jj() {
 
   if [ ${totalNum} -le 15 ]
   then
-    exa -al
+    ls -al
   elif [ ${totalNum} -ge 51 ]
   then
     echo "files in current directory is more than 50"
   else 
-    exa -a
+    ls -a
   fi
 
 }
