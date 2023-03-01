@@ -28,7 +28,7 @@ alias "python"="python3"
 alias "pip"="pip3"
 alias "sc"="ssh albert@aliyun0605"
 alias "tm"="tmux"
-alias "ll"="ls -a"
+alias "ll"="exa -a"
 
 #  -------------------- function --------------------
 
@@ -58,12 +58,12 @@ function cc() {
 
   if [ ${totalNum} -le 15 ]
   then
-    ls -al
+    exa -al
   elif [ ${totalNum} -ge 51 ]
   then
     echo "files in current directory is more than 50"
   else 
-    ls -a
+    exa -a
   fi
 }
 
