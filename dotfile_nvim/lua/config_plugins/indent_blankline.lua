@@ -24,19 +24,19 @@ indent_blankline.setup({
     "arguments",
   },
   -- echo &filetype
-  filetype_exclude = {
-    "null-ls-info",
-    "dashboard",
-    "packer",
-    "terminal",
-    "help",
-    "log",
-    "markdown",
-    "TelescopePrompt",
-    "lsp-installer",
-    "lspinfo",
-    "toggleterm",
-  },
+  -- filetype_exclude = {
+  --   "null-ls-info",
+  --   "dashboard",
+  --   "packer",
+  --   "terminal",
+  --   "help",
+  --   "log",
+  --   "markdown",
+  --   "TelescopePrompt",
+  --   "lsp-installer",
+  --   "lspinfo",
+  --   "toggleterm",
+  -- },
   -- 竖线样式
   -- char = '¦'
   -- char = '┆'
