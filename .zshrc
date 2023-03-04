@@ -1,3 +1,4 @@
+#!/bin/bssh
 # starship
 eval "$(starship init zsh)"
 
@@ -35,7 +36,10 @@ alias "ll"="exa -a"
 my_scripts_dir="/Users/albert/my_script/"
 my_scripts=("script_man/man_to_nvim.sh" 
             "script_waque/waque_upload.sh"
-            "script_out/out_go.sh")
+            "script_out/out_go.sh"
+            "script_fzf/fzf_edit.sh"
+            "script_git/git_add_commit.sh"
+          )
 
 for single_script in "${my_scripts[@]}"; do
   current_script="${my_scripts_dir}${single_script}"
@@ -88,11 +92,11 @@ mytreedu() {
 
 function jj() {
   j ${1}
-  currentPath=$(pwd)
-  normalFileNum=$(ls -al| grep "^-"| wc -l| tr -d ' ')
-  dirFileNum=`ls -al| grep "^d"| wc -l| tr -d ' '`
+  local currentPath=$(pwd)
+  local normalFileNum=$(ls -al| grep "^-"| wc -l| tr -d ' ')
+  local dirFileNum=`ls -al| grep "^d"| wc -l| tr -d ' '`
   # totalNum=`expr ${normalFileNum} + ${dirFileNum}`
-  totalNum=$(( ${normalFileNum} + ${dirFileNum}))
+  local totalNum=$(( ${normalFileNum} + ${dirFileNum}))
   #echo -e "\e[33m current path is: ${currentPath} \e[0m"
   echo -e "\e[35m total: ${totalNum} \e[0m"
 
