@@ -42,7 +42,7 @@ my_scripts=("script_man/man_to_nvim.sh"
             "script_fzf/fzf_edit.sh"
             "script_fzf/fzf_jump.sh"
             "script_git/git_add_commit.sh"
-            "script_shell/shell_cc.sh"
+            "script_shell/shell_cl.sh"
             "script_shell/shell_jj.sh"
             "script_shell/shell_tree_du.sh"
           )
