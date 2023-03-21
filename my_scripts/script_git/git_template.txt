@@ -1,0 +1,20 @@
+# ****== type ==****
+# ******************
+# **** fix      ****
+# **** init     ****
+# **** feat     ****
+# **** perf     ****
+# **** test     ****
+# **** style    ****
+# **** chore    ****
+# **** revert   ****
+# **** refactor ****
+# ******************
+
+# ********************* content *********************
+# <type>([optional scope]): <description>
+
+# [optional body]
+
+# [optional footer(s)]
+# ********************* content *********************

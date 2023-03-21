@@ -1,0 +1,3 @@
+function fv {
+  nvim $(fzf)
+}
