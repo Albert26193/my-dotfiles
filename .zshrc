@@ -40,7 +40,11 @@ my_scripts=("script_man/man_to_nvim.sh"
             "script_waque/waque_upload.sh"
             "script_out/out_go.sh"
             "script_fzf/fzf_edit.sh"
+            "script_fzf/fzf_jump.sh"
             "script_git/git_add_commit.sh"
+            "script_shell/shell_cc.sh"
+            "script_shell/shell_jj.sh"
+            "script_shell/shell_tree_du.sh"
           )
 
 for single_script in "${my_scripts[@]}"; do
@@ -51,68 +55,6 @@ for single_script in "${my_scripts[@]}"; do
     source "${current_script}"
   fi
 done
-
-function cc() {
-  cd ${1}
-  local currentPath=$(pwd)
-  local normalFileNum=$(ls -al| grep "^-"| wc -l| tr -d ' ')
-  local dirFileNum=`ls -al| grep "^d"| wc -l| tr -d ' '`
-  # totalNum=`expr ${normalFileNum} + ${dirFileNum}`
-  local totalNum=$(( ${normalFileNum} + ${dirFileNum}))
-  echo -e "\e[33m current path is: ${currentPath} \e[0m"
-  echo -e "\e[35m total: ${totalNum} \e[0m"
-
-  if [ ${totalNum} -le 15 ]
-  then
-    exa -al
-  elif [ ${totalNum} -ge 51 ]
-  then
-    echo "files in current directory is more than 50"
-  else 
-    exa -a
-  fi
-}
-
-mytreedu() {
-  local depth=''
-
-  while getopts "L:" opt ; do
-    case "$opt" in
-      L) depth="$OPTARG" ;;
-    esac
-  done
-
-  shift "$((OPTIND-1))"
-
-  if [ -z "$depth" ] ; then
-    tree --du -d -shaC "$@"
-  else   
-    local PATTERN='(  *[^ ]* ){'"$depth"'}\['
-    tree --du -d -shaC "$@" | grep -Ev "$PATTERN"
-  fi
-}
-
-function jj() {
-  j ${1}
-  local currentPath=$(pwd)
-  local normalFileNum=$(ls -al| grep "^-"| wc -l| tr -d ' ')
-  local dirFileNum=`ls -al| grep "^d"| wc -l| tr -d ' '`
-  # totalNum=`expr ${normalFileNum} + ${dirFileNum}`
-  local totalNum=$(( ${normalFileNum} + ${dirFileNum}))
-  #echo -e "\e[33m current path is: ${currentPath} \e[0m"
-  echo -e "\e[35m total: ${totalNum} \e[0m"
-
-  if [ ${totalNum} -le 15 ]
-  then
-    ls -al
-  elif [ ${totalNum} -ge 51 ]
-  then
-    echo "files in current directory is more than 50"
-  else 
-    ls -a
-  fi
-
-}
 
 # --------------------- conda --------------------
 # !! Contents within this block are managed by 'conda init' !!
