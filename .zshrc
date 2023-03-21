@@ -22,6 +22,7 @@ export PATH="/usr/local/opt/ncurses/bin:$PATH"
 bindkey -v
 
 export LS_COLORS=${LS_COLORS}:'di=01;35'
+
 #  --------------------- alias --------------------
 alias "pc"="proxychains4"
 alias "nv"="nvim"
@@ -30,10 +31,11 @@ alias "pip"="pip3"
 alias "sc"="ssh albert@aliyun0605"
 alias "tm"="tmux"
 alias "ll"="exa -a"
+alias "lg"="lazygit"
 
 #  -------------------- function --------------------
 
-my_scripts_dir="/Users/albert/my_script/"
+my_scripts_dir="/Users/albert/CodeSpace/config_archive/my_scripts/"
 my_scripts=("script_man/man_to_nvim.sh" 
             "script_waque/waque_upload.sh"
             "script_out/out_go.sh"
