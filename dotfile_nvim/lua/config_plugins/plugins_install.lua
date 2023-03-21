@@ -25,10 +25,12 @@ packer.startup({
     --------------------- Other --------------------
     -- nvim-treesitter
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+    use({"p00f/nvim-ts-rainbow"})
     -- nvim
     use({ 'phaazon/hop.nvim', branch = 'v2'})
     -- 主题
     use("overcache/neosolarized")
+    use ('projekt0n/github-nvim-theme')
     -- accelerated-jk
     use {'rainbowhxch/accelerated-jk.nvim'}
      -- indent-blankline
