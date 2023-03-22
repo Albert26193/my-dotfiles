@@ -69,7 +69,7 @@ function cc {
   done
 
   # 使用 fd 命令搜索文件，并传递 --hidden 参数来搜索隐藏文件
-  local target_file=$(fd --type f --hidden "${exclude_args[@]}" --search-path "${target_dir}" | fzf --query="${target_dir} $1 $2")
+  local target_file=$(fd --hidden "${exclude_args[@]}" --search-path "${target_dir}" | fzf --query="${target_dir} $1 $2")
   local father_dir=$(dirname "${target_file}")
   cd ${father_dir}
 
