@@ -18,7 +18,7 @@ else
     -- auto pair
   require('config_plugins.auto_pair')
     -- surround
-  require('config_plugins.surround')
+  --require('config_plugins.surround')
     -- comment
   require('config_plugins.comment')
     -- nvim-treesitter
@@ -36,4 +36,9 @@ else
 
   -- lsp default config
   require('config_lsp.lsp_config')
+end
+
+
+if vim.o.termguicolors then
+    vim.o.termguicolors = true
 end

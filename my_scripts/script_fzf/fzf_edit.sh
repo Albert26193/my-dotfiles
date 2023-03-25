@@ -1,5 +1,5 @@
 function fv {
-  #local target_dir="/Users/albert/CodeSpace/"
+  local target_dir="/Users/albert/CodeSpace/"
   local target_dir="/Users/albert/CodeSpace"
   local ignore_dirs=(
   "node_modules"
@@ -27,6 +27,6 @@ function fv {
 
   # 使用 fd 命令搜索文件，并传递 --hidden 参数来搜索隐藏文件
   local target_file=$(fd --type f --hidden "${exclude_args[@]}" --search-path "${target_dir}" | fzf --query="${target_dir} $1 $2")
-  nvim ${target_file}
+  local father_dir=$(dirname "${target_file}")
+  cd ${father_dir} && nvim ${target_file}
 }
-

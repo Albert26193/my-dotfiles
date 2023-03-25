@@ -30,7 +30,7 @@ packer.startup({
     use({ 'phaazon/hop.nvim', branch = 'v2'})
     -- 主题
     use("overcache/neosolarized")
-    use ('projekt0n/github-nvim-theme')
+    use("folke/tokyonight.nvim")
     -- accelerated-jk
     use {'rainbowhxch/accelerated-jk.nvim'}
      -- indent-blankline

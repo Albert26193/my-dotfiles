@@ -1,5 +1,4 @@
 function c {
-  #local target_dir="/Users/albert/CodeSpace/"
   local target_dir="/Users/albert/CodeSpace"
   local ignore_dirs=(
   "node_modules"
