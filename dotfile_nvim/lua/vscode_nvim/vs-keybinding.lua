@@ -32,19 +32,20 @@ keymap('n', 'zo', ':call VSCodeNotify("editor.unfold")<CR>', opts)
 
 -- Use VSCode Comments
 opts.noremap = false
-keymap('x', 'gc', '<Plug>VSCodeCommentary', opts)
-keymap('n', 'gc', '<Plug>VSCodeCommentary', opts)
-keymap('o', 'gc', '<Plug>VSCodeCommentary', opts)
-keymap('n', 'gcc', '<Plug>VSCodeCommentaryLine', opts)
+keymap('o', 'gc', ':call VSCodeNotify("editor.action.commentLine")<CR>', opts)
+keymap('v', 'gc', ':call VSCodeNotify("editor.action.commentLine")<CR>', opts)
+keymap('n', 'gc', ':call VSCodeNotify("editor.action.commentLine")<CR>', opts)
+keymap('o', 'gC', ':call VSCodeNotify("editor.action.blockComment")<CR>', opts)
+keymap('v', 'gC', ':call VSCodeNotify("editor.action.blockComment")<CR>', opts)
+keymap('n', 'gC', ':call VSCodeNotify("editor.action.blockComment")<CR>', opts)
 
 -- 自定义翻半页
-opts.noremap = true
-keymap('n', '<C-u>', '20k', opts)
-keymap('n', '<C-d>', '20j', opts)
+-- opts.noremap = true
+keymap('n', '<C-u>', '20gk', opts)
+keymap('n', '<C-d>', '20gj', opts)
 
 -- jk 用映射jk，消除移动光标时展开折叠
---keymap('n', 'j', 'gj', opts)
---keymap('v', 'j', 'gj', opts)
---keymap('n', 'k', 'gk', opts)
---keymap('v', 'k', 'gk', opts)
-
+keymap('n', 'j', 'gj', opts)
+keymap('v', 'j', 'gj', opts)
+keymap('n', 'k', 'gk', opts)
+keymap('v', 'k', 'gk', opts)

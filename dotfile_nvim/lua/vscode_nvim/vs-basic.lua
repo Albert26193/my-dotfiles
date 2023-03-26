@@ -9,7 +9,7 @@ vim.o.scrolloff = 10
 vim.o.sidescrolloff = 10
 
 -- 使用相对行号
-vim.wo.number = true
+-- vim.wo.number = true
 -- vim.wo.relativenumber = true
 
 -- 高亮所在行
