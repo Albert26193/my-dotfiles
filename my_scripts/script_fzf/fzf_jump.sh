@@ -4,6 +4,7 @@ function show_all_files {
     local normalFileNum=$(ls -al| grep "^-"| wc -l| tr -d ' ')
     local dirFileNum=`ls -al| grep "^d"| wc -l| tr -d ' '`
     local totalNum=$(( ${normalFileNum} + ${dirFileNum}))
+    echo -e "\e[33m $(pwd) \e[0m"
     echo -e "\e[35m total: ${totalNum} \e[0m"
 
     if [ ${totalNum} -le 15 ]
@@ -17,8 +18,22 @@ function show_all_files {
     fi
 }
 
+# fuzzy jump
 function jj {
-    local target_dir="/Users/albert/CodeSpace"
+  local target_file="$(fs $1 $2)"
+  if [[ -d "${target_file}" ]]; then
+      cd "${target_file}" && show_all_files
+  elif [[ -f "${target_file}" ]]; then
+      local father_dir=$(dirname "${target_file}")
+      cd "${father_dir}" && show_all_files
+  else
+      exit(1)
+  fi
+}
+
+# fuzzy search
+function fs {
+    local root_dir="/Users/albert/CodeSpace"
     local ignore_dirs=(
     "node_modules"
     ".git"
@@ -31,8 +46,7 @@ function jj {
     "image"
     "images"
     "static"
-    "data"
-)
+    "data")
 
   # 将 ignore_dirs 数组转化为 fd 的 --exclude 参数
   local exclude_args=()
@@ -41,14 +55,6 @@ function jj {
   done
 
   # 使用 fd 命令搜索文件，并传递 --hidden 参数来搜索隐藏文件
-  local target_file=$(fd --hidden "${exclude_args[@]}" --search-path "${target_dir}" | fzf --query="${target_dir} $1 $2")
-
-  if [[ -d "${target_file}" ]]; then
-      cd "${target_file}" && show_all_files
-  elif [[ -f "${target_file}" ]]; then
-      local father_dir=$(dirname "${target_file}")
-      cd "${father_dir}" && show_all_files
-  else
-      exit(1)
-  fi
+  local target_file=$(fd --hidden "${exclude_args[@]}" --search-path "${root_dir}" | fzf --query="${root_dir} $1 $2")
+  echo "${target_file}"
 }
