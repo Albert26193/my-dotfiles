@@ -17,37 +17,6 @@ function show_all_files {
     fi
 }
 
-
-function j {
-    #local target_dir="/Users/albert/CodeSpace/"
-    local target_dir="/Users/albert/CodeSpace"
-    local ignore_dirs=(
-    "node_modules"
-    ".git"
-    "dist"
-    ".cache"
-    "voice-print"
-    "lodash"
-    "from_github"
-    "assets"
-    "image"
-    "images"
-    "static"
-    "data"
-)
-
-  # 将 ignore_dirs 数组转化为 fd 的 --exclude 参数
-  local exclude_args=()
-  for dir in "${ignore_dirs[@]}"; do
-      exclude_args+=("--exclude" "${dir}")
-  done
-
-  # 使用 fd 命令搜索文件，并传递 --hidden 参数来搜索隐藏文件
-  local target_file=$(fd --hidden "${exclude_args[@]}" --search-path "${target_dir}" | fzf --query="${target_dir} $1 $2")
-  local father_dir=$(dirname "${target_file}")
-  cd ${father_dir}
-}
-
 function jj {
     local target_dir="/Users/albert/CodeSpace"
     local ignore_dirs=(
@@ -72,14 +41,14 @@ function jj {
   done
 
   # 使用 fd 命令搜索文件，并传递 --hidden 参数来搜索隐藏文件
-  local target_file=$(fd --type --hidden "${exclude_args[@]}" --search-path "${target_dir}" | fzf --query="${target_dir} $1 $2")
+  local target_file=$(fd --hidden "${exclude_args[@]}" --search-path "${target_dir}" | fzf --query="${target_dir} $1 $2")
 
-  if [-d "${target_file}"]; then
+  if [[ -d "${target_file}" ]]; then
       cd "${target_file}" && show_all_files
-  elif [-f "${target_file}"]; then
-      j "${target_file}" && show_all_files
+  elif [[ -f "${target_file}" ]]; then
+      local father_dir=$(dirname "${target_file}")
+      cd "${father_dir}" && show_all_files
   else
       exit(1)
   fi
-
 }

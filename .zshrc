@@ -28,7 +28,6 @@ alias "pc"="proxychains4"
 alias "nv"="nvim"
 alias "python"="python3"
 alias "pip"="pip3"
-alias "sc"="ssh albert@aliyun0605"
 alias "tm"="tmux"
 alias "ll"="exa -a"
 alias "lg"="lazygit"
@@ -36,7 +35,7 @@ alias "lg"="lazygit"
 #  -------------------- function --------------------
 
 my_scripts_dir="/Users/albert/CodeSpace/config_archive/my_scripts/"
-my_scripts=("script_man/man_to_nvim.sh" 
+my_scripts=(
             "script_waque/waque_upload.sh"
             "script_out/out_go.sh"
             "script_fzf/fzf_edit.sh"
@@ -44,6 +43,8 @@ my_scripts=("script_man/man_to_nvim.sh"
             "script_git/git_add_commit.sh"
             "script_shell/shell_cl.sh"
             "script_shell/shell_tree_du.sh"
+            "script_shell/shell_stat.sh"
+            "script_shell/shell_man_nvim.sh"
           )
 
 for single_script in "${my_scripts[@]}"; do
@@ -86,5 +87,3 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottle
 # export LESS_TERMCAP_ue=$'\e[0m'
 # export LESS_TERMCAP_us=$'\e[1;4;31m'
 
-# ---------------------- pager ---------------
-export PAGER='bat -p --number'
