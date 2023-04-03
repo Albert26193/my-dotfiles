@@ -1,4 +1,6 @@
 #!/bin/bash
+# The file has been deprecated.
+# please use LazyGit
 
 menu() {
   echo "files to add:"

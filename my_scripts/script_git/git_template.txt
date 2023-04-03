@@ -12,6 +12,7 @@
 # ******************
 
 # ********************* content *********************
+[type]
 # <type>([optional scope]): <description>
 
 # [optional body]
