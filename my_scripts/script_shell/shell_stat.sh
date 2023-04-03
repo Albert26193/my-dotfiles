@@ -1,10 +1,13 @@
 function sta {
-    stat -f "File: %N
+    stat -f "
+    File: %N
     Size: %z bytes
-    Type: %HT
+    Type: %HT 
+
     Created: %SB
     Modified: %Sm
-    Accessed: %Sa
+    Accessed: %Sa 
+
     Owner: %Su/%u
     Group: %Sg/%g
     Flags: %Of/%Sp/%SMp/%Sf
