@@ -6,5 +6,5 @@
 2. fzf
 
 ## 2. TODO
-- [ ] add the parameters to the proxy function
-- [ ] 'cc' function can receive both the file and directory as parameters
+
+- [ ] a lot
