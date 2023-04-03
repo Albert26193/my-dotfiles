@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="ys"
 
-plugins=(git fzf-tab autojump zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git fzf-tab zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -43,7 +43,6 @@ my_scripts=("script_man/man_to_nvim.sh"
             "script_fzf/fzf_jump.sh"
             "script_git/git_add_commit.sh"
             "script_shell/shell_cl.sh"
-            "script_shell/shell_jj.sh"
             "script_shell/shell_tree_du.sh"
           )
 
