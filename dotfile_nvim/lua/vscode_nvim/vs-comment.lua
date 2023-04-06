@@ -59,7 +59,7 @@ local default_opts = {
     basic = true,
     ---Extra mapping
     ---Includes `gco`, `gcO`, `gcA`
-    extra = false,
+    extra = true,
     ---Extended mapping
     ---Includes `g>`, `g<`, `g>[count]{motion}` and `g<[count]{motion}`
     extended = false,

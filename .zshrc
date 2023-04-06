@@ -87,3 +87,4 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottle
 # export LESS_TERMCAP_ue=$'\e[0m'
 # export LESS_TERMCAP_us=$'\e[1;4;31m'
 
+export PATH="$HOME/.cargo/bin:$PATH"
