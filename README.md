@@ -7,4 +7,4 @@
 
 ## 2. TODO
 
-- [ ] a lot
+- [ ] add multi dir to target(fzf_jump)

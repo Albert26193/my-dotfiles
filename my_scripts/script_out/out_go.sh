@@ -16,6 +16,7 @@ function proxy_on() {
 function proxy_off() {
     unset http_proxy
     unset https_proxy
+    unset all_proxy
     echo -e "proxy turn off"
     curl cip.cc
 }
