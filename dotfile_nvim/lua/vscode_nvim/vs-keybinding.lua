@@ -15,6 +15,15 @@ keymap('x', '<C-h>', ':call VSCodeNotify("workbench.action.navigateLeft")<CR>', 
 keymap('n', '<C-l>', ':call VSCodeNotify("workbench.action.navigateRight")<CR>', opts)
 keymap('x', '<C-l>', ':call VSCodeNotify("workbench.action.navigateRight")<CR>', opts)
 
+keymap('n', '<C-w>j', ':call VSCodeNotify("workbench.action.moveEditorToBelowGroup")<CR>', opts)
+keymap('x', '<C-w>j', ':call VSCodeNotify("workbench.action.moveEditorToBelowGroup")<CR>', opts)
+keymap('n', '<C-w>k', ':call VSCodeNotify("workbench.action.moveEditorToAboveGroup")<CR>', opts)
+keymap('x', '<C-w>k', ':call VSCodeNotify("workbench.action.moveEditorToAboveGroup")<CR>', opts)
+keymap('n', '<C-w>h', ':call VSCodeNotify("workbench.action.moveEditorToLeftGroup")<CR>', opts)
+keymap('x', '<C-w>h', ':call VSCodeNotify("workbench.action.moveEditorToLeftGroup")<CR>', opts)
+keymap('n', '<C-w>l', ':call VSCodeNotify("workbench.action.moveEditorToRightGroup")<CR>', opts)
+keymap('x', '<C-w>l', ':call VSCodeNotify("workbench.action.moveEditorToRightGroup")<CR>', opts)
+
 -- Use VSCode references
 keymap('n', 'gr', '<Cmd>call VSCodeNotify("editor.action.goToReferences")<CR>', opts)
 
@@ -30,20 +39,7 @@ keymap('n', 'zR', ':call VSCodeNotify("editor.unfoldAll")<CR>', opts)
 keymap('n', 'zc', ':call VSCodeNotify("editor.fold")<CR>', opts)
 keymap('n', 'zo', ':call VSCodeNotify("editor.unfold")<CR>', opts)
 
--- Use VSCode Comments
 opts.noremap = false
-keymap('o', 'gc', ':call VSCodeNotify("editor.action.commentLine")<CR>', opts)
-keymap('v', 'gc', ':call VSCodeNotify("editor.action.commentLine")<CR>', opts)
-keymap('n', 'gc', ':call VSCodeNotify("editor.action.commentLine")<CR>', opts)
-keymap('o', 'gC', ':call VSCodeNotify("editor.action.blockComment")<CR>', opts)
-keymap('v', 'gC', ':call VSCodeNotify("editor.action.blockComment")<CR>', opts)
-keymap('n', 'gC', ':call VSCodeNotify("editor.action.blockComment")<CR>', opts)
-
--- 自定义翻半页
--- opts.noremap = true
-keymap('n', '<C-u>', '20gk', opts)
-keymap('n', '<C-d>', '20gj', opts)
-
 -- jk 用映射jk，消除移动光标时展开折叠
 keymap('n', 'j', 'gj', opts)
 keymap('v', 'j', 'gj', opts)

@@ -26,13 +26,10 @@ else
   require('config_plugins.hop')
     -- indent_blankline
   require('config_plugins.indent_blankline')
-
   -- 主题设置
   require('config_general.colorscheme')
-
   -- 快捷键
   require('config_general.keybindings')
-
   -- lsp default config
   require('config_lsp.lsp_config')
 end
