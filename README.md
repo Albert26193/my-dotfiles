@@ -1,7 +1,8 @@
 # my dotfile
 
 ## 1. Dependency
-### 1.1 MAc
+
+### 1.1 Mac
 1. fd
 2. fzf
 
