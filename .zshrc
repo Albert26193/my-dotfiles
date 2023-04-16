@@ -33,7 +33,7 @@ alias "lg"="lazygit"
 
 #  -------------------- function --------------------
 
-my_scripts_dir="/Users/albert/CodeSpace/config_archive/my_scripts/"
+my_scripts_dir="${HOME}/CodeSpace/config_archive/my_scripts/"
 my_scripts=(
             "script_waque/waque_upload.sh"
             "script_out/out_go.sh"
