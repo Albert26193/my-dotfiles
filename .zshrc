@@ -1,4 +1,3 @@
-#!/bin/bssh
 # --------------------- oh-my-zsh ---------------
 export ZSH=$HOME/.oh-my-zsh
 
@@ -38,6 +37,8 @@ my_scripts_dir="/Users/albert/CodeSpace/config_archive/my_scripts/"
 my_scripts=(
             "script_waque/waque_upload.sh"
             "script_out/out_go.sh"
+            "script_fzf/fzf_export.sh"
+            "script_fzf/fzf_search.sh"
             "script_fzf/fzf_edit.sh"
             "script_fzf/fzf_jump.sh"
             "script_git/git_add_commit.sh"
