@@ -18,8 +18,6 @@ function fs {
         exclude_args+=("--exclude" "${dir}")
     done
     
-    echo "${exclude_args[@]}" >&2
-    read anykey
     # 循环处理 root_dirs 中的每个目录，并将搜索结果通过管道传递给 fzf
     local target_file=$(
     printf "%s\n" "${root_dirs[@]}" \
@@ -27,5 +25,4 @@ function fs {
     | fzf --query="$1$2"
     )
     echo "${target_file}"
-    read anykey
 }
