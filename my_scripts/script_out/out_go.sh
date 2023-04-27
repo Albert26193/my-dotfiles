@@ -1,15 +1,20 @@
 #!/bin/bash
 function proxy_on() {
-    if [ -n "$1" ]; then
-        port="$1"
-    else
-        port="7890"
+    local proxy_ip_address="127.0.0.1"
+    local port="7890"
+
+    if [[ -n "$1" ]]; then
+        proxy_ip_address="$1"
+    fi
+    
+    if [[ -n "$2" ]]; then
+        port="$2"
     fi
 
-    export http_proxy="http://127.0.0.1:${port}"
-    export https_proxy="http://127.0.0.1:${port}"
-    export all_proxy="socks5://127.0.0.1:${port}"
-    echo -e "proxy on，port is ${port}"
+    export http_proxy="http://${proxy_ip_address}:${port}"
+    export https_proxy="http://${proxy_ip_address}:${port}"
+    export all_proxy="socks5://${proxy_ip_address}:${port}"
+    echo -e "proxy on, ip is ${proxy_ip_address}, port is ${port}"
     curl cip.cc
 }
 
@@ -20,8 +25,3 @@ function proxy_off() {
     echo -e "proxy turn off"
     curl cip.cc
 }
-
-function weather() {
-    curl 'wttr.in/{Shanghai, Yancheng}?format=4'
-}
-
