@@ -3,8 +3,7 @@
 function test_openai_key {
   API_URL="https://api.openai.com/v1/organizations"
 
-  # add openai_tokens in ./openai_key_store.sh
-  source ./openai_key_store.sh
+  # add openai_tokens in openai_key_store.sh
 
   local openai_tokens=(${openai_tokens[@]})
   for openai_token in "${openai_tokens[@]}"; do
