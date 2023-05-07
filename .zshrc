@@ -46,6 +46,7 @@ my_scripts=(
             "script_shell/shell_tree_du.sh"
             "script_shell/shell_stat.sh"
             "script_shell/shell_man_nvim.sh"
+            "script_shell/shell_openai.sh"
           )
 
 for single_script in "${my_scripts[@]}"; do

@@ -16,7 +16,7 @@
   co = checkout
   br = branch
   df = diff
-  lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset)
+  lg = log --all --oneline --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset)'
 
 [commit]
 	template = /Users/albert/CodeSpace/config_archive/my_scripts/script_git/git_template.txt
