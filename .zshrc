@@ -33,7 +33,7 @@ alias "lg"="lazygit"
 
 #  -------------------- function --------------------
 
-my_scripts_dir="${HOME}/CodeSpace/config_archive/my_scripts/"
+my_scripts_dir="${HOME}/CodeSpace/my_dotfile/my_scripts/"
 my_scripts=(
             "script_waque/waque_upload.sh"
             "script_out/out_go.sh"
@@ -81,5 +81,8 @@ export NVM_DIR="$HOME/.nvm"
 
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
 
-# ---------------------- rust ---------------
+# ---------------------- rust ------------------
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# ---------------------- brew ------------------
+eval "$(/opt/homebrew/bin/brew shellenv)"
