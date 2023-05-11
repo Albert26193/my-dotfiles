@@ -36,50 +36,49 @@ alias "lg"="lazygit"
 
 my_scripts_dir="${HOME}/CodeSpace/my_dotfile/my_scripts/"
 my_scripts=(
-            "script_waque/waque_upload.sh"
-            "script_out/out_go.sh"
-            "script_fzf/fzf_export.sh"
-            "script_fzf/fzf_search.sh"
-            "script_fzf/fzf_edit.sh"
-            "script_fzf/fzf_jump.sh"
-            "script_git/git_add_commit.sh"
-            "script_shell/shell_cl.sh"
-            "script_shell/shell_tree_du.sh"
-            "script_shell/shell_stat.sh"
-            "script_shell/shell_man_nvim.sh"
-            "script_shell/openai_key_store.sh"
-            "script_shell/shell_openai.sh"
-          )
+    "script_waque/waque_upload.sh"
+    "script_out/out_go.sh"
+    "script_fzf/fzf_export.sh"
+    "script_fzf/fzf_search.sh"
+    "script_fzf/fzf_edit.sh"
+    "script_fzf/fzf_jump.sh"
+    "script_git/git_add_commit.sh"
+    "script_shell/shell_cl.sh"
+    "script_shell/shell_tree_du.sh"
+    "script_shell/shell_stat.sh"
+    "script_shell/shell_man_nvim.sh"
+    "script_shell/openai_key_store.sh"
+    "script_shell/shell_openai.sh"
+)
 
 for single_script in "${my_scripts[@]}"; do
-  current_script="${my_scripts_dir}${single_script}"
-  if [[ ! -f ${current_script} ]]; then
-    echo "${current_script} does not exist"
-  else
-    source "${current_script}"
-  fi
+    current_script="${my_scripts_dir}${single_script}"
+    if [[ ! -f ${current_script} ]]; then
+        echo "${current_script} does not exist"
+    else
+        source "${current_script}"
+    fi
 done
 
 # --------------------- conda --------------------
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
-  eval "$__conda_setup"
+    eval "$__conda_setup"
 else
-  if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
-    . "/usr/local/anaconda3/etc/profile.d/conda.sh"
-  else
-    export PATH="/usr/local/anaconda3/bin:$PATH"
-  fi
+    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/anaconda3/bin:$PATH"
+    fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
 # --------------------- nvm --------------------
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+ 
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
 
 # ---------------------- rust ------------------
