@@ -26,5 +26,3 @@ function yn_prompt() {
         esac
     done
 }
-
-yn_prompt "Are you sure to continue?"
