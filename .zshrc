@@ -78,7 +78,7 @@ unset __conda_setup
 # --------------------- nvm --------------------
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
- 
+
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
 
 # ---------------------- rust ------------------
