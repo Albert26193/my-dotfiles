@@ -1,15 +1,21 @@
 [user]
   name = Albert
   email = albert990624@gmail.com
+
 [credential]
   helper = cache
+
 [color]
   ui = auto
+
 [init]
   defaultBranch = master
+
 [core]
   editor = nvim
   autocrlf = input
+  pager = delta
+
 [alias]
   st = status
   ci = commit
@@ -19,4 +25,19 @@
   lg = log --all --oneline --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset)'
 
 [commit]
-	template = /Users/albert/CodeSpace/config_archive/my_scripts/script_git/git_template.txt
+  template = ${HOME}/CodeSpace/my_dotfile/my_scripts/script_git/git_template.txt
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  side-by-side = true
+  line-numbers = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
