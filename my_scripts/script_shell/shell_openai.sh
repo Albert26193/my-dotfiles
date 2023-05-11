@@ -17,3 +17,8 @@ function test_openai_key {
     fi
   done
 }
+
+
+function test_openai_ip {
+  bash <(curl -Ls https://cdn.jsdelivr.net/gh/missuo/OpenAI-Checker/openai.sh)
+}
