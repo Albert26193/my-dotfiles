@@ -28,7 +28,8 @@ alias "nv"="nvim"
 alias "python"="python3"
 alias "pip"="pip3"
 alias "tm"="tmux"
-alias "ll"="ls -al"
+alias "ll"="ls -a"
+alias "rm"="rm -i"
 alias "lg"="lazygit"
 
 #  -------------------- function --------------------
