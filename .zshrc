@@ -17,9 +17,10 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 export TERM="xterm-256color"
 echo "\e[35m nice to meet you 🚀\e[0m"
 export PATH="/usr/local/opt/ncurses/bin:$PATH"
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 bindkey -v
-
 export LS_COLORS=${LS_COLORS}:'di=01;35'
 
 #  --------------------- alias --------------------
@@ -33,7 +34,6 @@ alias "rm"="rm -i"
 alias "lg"="lazygit"
 
 #  -------------------- function --------------------
-
 my_scripts_dir="${HOME}/CodeSpace/my_dotfile/my_scripts/"
 my_scripts=(
     "script_shell/shell_utils.sh"
