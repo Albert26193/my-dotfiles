@@ -78,11 +78,12 @@ unset __conda_setup
 # --------------------- nvm --------------------
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # ---------------------- rust ------------------
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # ---------------------- brew ------------------
 eval "$(/opt/homebrew/bin/brew shellenv)"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
+
