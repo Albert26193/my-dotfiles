@@ -7,11 +7,9 @@ function show_all_files {
     echo -e "\e[33m $(pwd) \e[0m"
     echo -e "\e[35m total: ${totalNum} \e[0m"
 
-    if [ ${totalNum} -le 15 ]
-    then
+    if [[ ${totalNum} -le 15 ]]; then
         ls -al
-    elif [ ${totalNum} -ge 51 ]
-    then
+    elif [[ ${totalNum} -ge 51 ]]; then
         echo "files in current directory is more than 50"
     else 
         ls -a
