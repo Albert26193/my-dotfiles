@@ -29,7 +29,7 @@ alias "nv"="nvim"
 alias "python"="python3"
 alias "pip"="pip3"
 alias "tm"="tmux"
-alias "ll"="ls -a"
+alias "ll"="ls -l"
 alias "rm"="rm -i"
 alias "lg"="lazygit"
 
@@ -73,8 +73,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
 
-
-#------------------------ conda ------------------------
+# ---------------------- conda ------------------
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -90,3 +89,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# ---------------------- conda ------------------
+export PATH="$PATH:/opt/homebrew/bin/git-lfs"

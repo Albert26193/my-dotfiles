@@ -28,7 +28,8 @@ keymap('x', '<C-w>l', ':call VSCodeNotify("workbench.action.moveEditorToRightGro
 keymap('n', 'gr', '<Cmd>call VSCodeNotify("editor.action.goToReferences")<CR>', opts)
 
 -- Change editor width
-keymap('n', '<C-w>_', ':<C-u>call VSCodeNotify("workbench.action.toggleEditorWidths")<CR>', opts)
+keymap('n', '<C-w>z', ':<C-u>call VSCodeNotify("workbench.action.toggleEditorWidths")<CR>', opts)
+keymap('x', '<C-w>z', ':<C-u>call VSCodeNotify("workbench.action.toggleEditorWidths")<CR>', opts)
 
 -- Use Space to open Which Key
 keymap('n', '<Space>', ':call VSCodeNotify("whichkey.show")<CR>', opts)

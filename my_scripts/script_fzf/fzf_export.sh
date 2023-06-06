@@ -6,6 +6,7 @@ jump_root_dirs=(
     "${HOME}/CodeSpace/"
     "${HOME}/.config/"
     "${HOME}/.ssh/"
+    "${HOME}/tmp"
 )
 
 jump_ignore_dirs=(
