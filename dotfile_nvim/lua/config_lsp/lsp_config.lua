@@ -4,6 +4,7 @@ require'lspconfig'.bashls.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.lua_ls.setup{}
+require'lspconfig'.jdtls.setup{}
 
 
 -- 针对不同语言设置不同的缩进宽度

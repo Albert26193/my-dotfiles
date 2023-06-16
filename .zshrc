@@ -89,5 +89,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# ---------------------- conda ------------------
+# ---------------------- git-lfs ------------------
 export PATH="$PATH:/opt/homebrew/bin/git-lfs"
+
+# ---------------------- JAVA HOME --------------------
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export PATH=$JAVA_HOME/bin:$PATH
+
