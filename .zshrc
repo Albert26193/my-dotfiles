@@ -2,6 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="ys"
+#ZSH_THEME="linuxonly"
 
 plugins=(git fzf-tab zsh-syntax-highlighting zsh-autosuggestions)
 
