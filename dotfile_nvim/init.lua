@@ -38,3 +38,5 @@ end
 if vim.o.termguicolors then
     vim.o.termguicolors = true
 end
+
+-- require('custom_command.highlight_mark')

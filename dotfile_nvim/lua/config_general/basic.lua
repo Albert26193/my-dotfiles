@@ -114,3 +114,4 @@ vim.o.showmode = false
 
 -- clipboard
 vim.opt.clipboard = "unnamed"
+

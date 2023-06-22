@@ -17,3 +17,4 @@ vim.api.nvim_exec([[
   autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
   autocmd FileType typescript setlocal tabstop=2 shiftwidth=2
 ]], false)
+
