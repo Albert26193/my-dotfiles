@@ -38,18 +38,19 @@ alias "lg"="lazygit"
 my_scripts_dir="${HOME}/CodeSpace/my_dotfile/my_scripts/"
 my_scripts=(
     "script_shell/shell_utils.sh"
-    "script_shell/openai_key_store.sh"
     "script_shell/shell_cl.sh"
     "script_shell/shell_tree_du.sh"
     "script_shell/shell_stat.sh"
     "script_shell/shell_man_nvim.sh"
-    "script_shell/shell_openai.sh"
     "script_out/out_go.sh"
     "script_fzf/fzf_export.sh"
     "script_fzf/fzf_search.sh"
     "script_fzf/fzf_edit.sh"
     "script_fzf/fzf_jump.sh"
     "script_fzf/fzf_history.sh"
+    "script_gpt/openai_key_store.sh"
+    "script_gpt/shell_sgpt.sh"
+    "script_gpt/shell_openai.sh"
 )
 
 for single_script in "${my_scripts[@]}"; do
@@ -96,4 +97,3 @@ export PATH="$PATH:/opt/homebrew/bin/git-lfs"
 # ---------------------- JAVA HOME --------------------
 export JAVA_HOME="$(/usr/libexec/java_home)"
 export PATH=$JAVA_HOME/bin:$PATH
-

@@ -6,7 +6,7 @@ jump_root_dirs=(
     "${HOME}/CodeSpace/"
     "${HOME}/.config/"
     "${HOME}/.ssh/"
-    "${HOME}/tmp"
+    "${HOME}/tmp/"
 )
 
 jump_ignore_dirs=(
@@ -16,12 +16,15 @@ jump_ignore_dirs=(
     ".cache"
     "voice-print"
     "lodash"
-    "from_github"
+    "from-github"
     "assets"
     "image"
     "images"
     "static"
     "data"
+    "raycast"
+    "obsidian-*"
+    "zlt-*"
 )
 
 # for fzf_edit
