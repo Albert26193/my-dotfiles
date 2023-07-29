@@ -3,6 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="ys"
 #ZSH_THEME="linuxonly"
+#ZSH_THEME="af-magic"
 
 plugins=(git fzf-tab zsh-syntax-highlighting zsh-autosuggestions)
 

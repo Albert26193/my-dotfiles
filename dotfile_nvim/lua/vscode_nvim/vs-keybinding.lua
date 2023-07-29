@@ -43,6 +43,6 @@ keymap('n', 'zo', ':call VSCodeNotify("editor.unfold")<CR>', opts)
 opts.noremap = false
 -- jk 用映射jk，消除移动光标时展开折叠
 keymap('n', 'j', 'gj', opts)
-keymap('v', 'j', 'gj', opts)
+keymap('x', 'j', 'gj', opts)
 keymap('n', 'k', 'gk', opts)
-keymap('v', 'k', 'gk', opts)
+keymap('x', 'k', 'gk', opts)
