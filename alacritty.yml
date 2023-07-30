@@ -10,8 +10,10 @@ font:
     #   - (Windows) Consolas
     #  family: Hack Nerd Font
     #  family: JetBrains Mono
+    #  family: JetBrains Mono Nerd Font
+    #  family: Source Code Pro
     #  family: sauceCodePro Nerd Font
-    family: Source Code Pro
+    family: FiraCode Nerd Font
     # The `style` can be specified to pick a specific face.
     style:
       Regular

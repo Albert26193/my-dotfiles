@@ -86,7 +86,8 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 
 -- 自动补全不自动选中
-vim.g.completeopt = "menu,menuone,noselect,noinsert,preview"
+-- vim.opt.completeopt = "menu,menuone,preview"
+vim.opt.completeopt = {'menuone'}
 
 -- 样式
 vim.o.background = "dark"
