@@ -1,30 +1,35 @@
 if vim.g.vscode then
   require('vscode_nvim.vs-basic')
   require('vscode_nvim.vs-keybinding')
-  require('vscode_nvim.vs-hop')
+  -- require('vscode_nvim.vs-hop')
   require('vscode_nvim.vs-comment')
 else
   -- 基本配置
   require('config_general.basic')
 
   -- 插件配置
-    -- 安装配置
+  -- 安装配置
   require('config_plugins.plugins_install')
-    -- cmp
+  -- cmp
   require('config_plugins.cmp')
-    -- telescope
+  -- telescope
   require('config_plugins.telescope')
-    -- auto pair
+  -- auto pair
   require('config_plugins.auto_pair')
-    -- surround
+  -- surround
   --require('config_plugins.surround')
-    -- comment
+  -- comment
   require('config_plugins.comment')
-    -- nvim-treesitter
+  -- nvim-treesitter
   require('config_plugins.nvim_treesitter')
-    -- hop
+  -- hop
   require('config_plugins.hop')
-    -- indent_blankline
+  -- lualine
+  require('config_plugins.lualine')
+  --hover
+  require('config_plugins.hover')
+  require('config_plugins.trouble')
+  -- indent_blankline
   require('config_plugins.indent_blankline')
   -- 主题设置
   require('config_general.colorscheme')

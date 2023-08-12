@@ -16,18 +16,25 @@ packer.startup({
     use("hrsh7th/vim-vsnip")
     -- 补全源
     use("hrsh7th/cmp-vsnip")
-    use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
-    use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
-    use("hrsh7th/cmp-path") -- { name = 'path' }
-    use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+    use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-path")
+    use("hrsh7th/cmp-cmdline")
     -- 常见编程语言代码段
     use("rafamadriz/friendly-snippets")
     --------------------- Other --------------------
+    use({"lewis6991/hover.nvim"})
     -- nvim-treesitter
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-    use({"p00f/nvim-ts-rainbow"})
-    -- nvim
+    use({ "folke/trouble.nvim", ependencies = { "nvim-tree/nvim-web-devicons" },})
+    -- hop
     use({ 'phaazon/hop.nvim', branch = 'v2'})
+    -- status line
+    use({
+      "nvim-lualine/lualine.nvim",
+      requires = { "kyazdani42/nvim-web-devicons" },
+    })
+    use("arkav/lualine-lsp-progress")
     -- 主题
     use("overcache/neosolarized")
     use("folke/tokyonight.nvim")

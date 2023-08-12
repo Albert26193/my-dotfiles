@@ -5,7 +5,8 @@ if not status then
 end
 
 -- place this in one of your configuration file(s)
-local directions = require('hop.hint').HintDirection
+-- local directions = require('hop.hint').HintDirection
+
 hop.setup({
   keys = 'etovxqpdygfblzhckisuran',
   multi_windows = true,
