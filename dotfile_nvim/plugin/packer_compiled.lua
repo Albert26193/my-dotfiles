@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/albertwang/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/Users/albertwang/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/albertwang/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -138,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/albertwang/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/Users/albertwang/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
   },
   neosolarized = {
     loaded = true,

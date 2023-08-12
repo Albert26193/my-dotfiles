@@ -27,24 +27,3 @@ jump_ignore_dirs=(
     "zlt-*"
 )
 
-# for fzf_edit
-# TODO
-#edit_root_dirs=(
-#    "/Users/albert/CodeSpace/"
-#    "/Users/albert/.config/"
-#)
-#
-#edit_ignore_dirs=(
-#    "node_modules"
-#    ".git"
-#    "dist"
-#    ".cache"
-#    "voice-print"
-#    "lodash"
-#    "from_github"
-#    "assets"
-#    "image"
-#    "images"
-#    "static"
-#    "data"
-#)

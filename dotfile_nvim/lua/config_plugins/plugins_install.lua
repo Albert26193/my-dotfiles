@@ -7,6 +7,8 @@ packer.startup({
     use 'wbthomason/packer.nvim'
     --------------------- LSP --------------------
     -- use("williamboman/nvim-lsp-installer")
+    -- manson
+    use({"williamboman/mason.nvim"})
     -- Lspconfig
     use({ "neovim/nvim-lspconfig" })
     ----------------------------------------------
@@ -22,6 +24,8 @@ packer.startup({
     use("hrsh7th/cmp-cmdline")
     -- 常见编程语言代码段
     use("rafamadriz/friendly-snippets")
+    -- formatter
+    use { 'mhartington/formatter.nvim' }
     --------------------- Other --------------------
     use({"lewis6991/hover.nvim"})
     -- nvim-treesitter

@@ -12,6 +12,8 @@ else
   require('config_plugins.plugins_install')
   -- cmp
   require('config_plugins.cmp')
+  -- manson
+  require('config_plugins.mason')
   -- telescope
   require('config_plugins.telescope')
   -- auto pair
@@ -26,6 +28,8 @@ else
   require('config_plugins.hop')
   -- lualine
   require('config_plugins.lualine')
+  -- formatter
+  require('config_plugins.formatter')
   --hover
   require('config_plugins.hover')
   require('config_plugins.trouble')

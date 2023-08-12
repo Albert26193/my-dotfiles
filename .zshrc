@@ -72,6 +72,10 @@ export NVM_DIR="$HOME/.nvm"
 # ---------------------- rust ------------------
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# -----------------------  go ------------------
+export GOPATH="$HOME/go"
+export PATH="$PATH:$(go env GOPATH)/bin"
+
 # ---------------------- brew ------------------
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
