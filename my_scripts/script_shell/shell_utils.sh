@@ -15,14 +15,14 @@ MY_UTILS_COLOR_RESET="\033[0m"
 
 # YN prompt
 function yn_prompt() {
-    local yn_input=""
-    while true; do
-        printf "$1 ${MY_UTILS_COLOR_CYAN}[y/n]: ${MY_UTILS_COLOR_RESET}"
-        read yn_input
-        case $yn_input in
-        [Yy]*) return 0 ;;
-        [Nn]*) return 1 ;;
-        *) echo "${MY_UTILS_COLOR_RED}Please answer yes or no.${MY_UTILS_COLOR_RESET}" ;;
-        esac
-    done
+	local yn_input=""
+	while true; do
+		printf "$1 ${MY_UTILS_COLOR_CYAN}[y/n]: ${MY_UTILS_COLOR_RESET}"
+		read yn_input
+		case $yn_input in
+		[Yy]*) return 0 ;;
+		[Nn]*) return 1 ;;
+		*) echo "${MY_UTILS_COLOR_RED}Please answer yes or no.${MY_UTILS_COLOR_RESET}" ;;
+		esac
+	done
 }
