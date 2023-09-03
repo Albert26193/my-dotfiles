@@ -189,6 +189,11 @@ _G.packer_plugins = {
     path = "/Users/albertwang/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rainbow-delimiters.nvim"] = {
+    loaded = true,
+    path = "/Users/albertwang/.local/share/nvim/site/pack/packer/start/rainbow-delimiters.nvim",
+    url = "https://github.com/hiphish/rainbow-delimiters.nvim"
+  },
   ["surround.nvim"] = {
     loaded = true,
     path = "/Users/albertwang/.local/share/nvim/site/pack/packer/start/surround.nvim",

@@ -40,6 +40,26 @@ formatter.setup({
 				}
 			end,
 		},
+		typescript = {
+			-- prettier
+			function()
+				return {
+					exe = "prettier",
+					args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), "--single-quote" },
+					stdin = true,
+				}
+			end,
+		},
+		sh = {
+			-- shfmt
+			function()
+				return {
+					exe = "shfmt",
+					args = { "" },
+					stdin = true,
+				}
+			end,
+		},
 	},
 })
 
@@ -48,7 +68,7 @@ vim.api.nvim_exec(
 	[[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.js,*.go,*.lua FormatWrite
+  autocmd BufWritePost *.js,*.go,*.lua,*.ts,*.sh FormatWrite
 augroup END
 ]],
 	true
