@@ -73,8 +73,8 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # -----------------------  go ------------------
-export GOPATH="$HOME/go"
-export PATH="$PATH:$(go env GOPATH)/bin"
+# export GOPATH="$HOME/go"
+# export PATH="$PATH:$(go env GOPATH)/bin"
 
 # ---------------------- brew ------------------
 eval "$(/opt/homebrew/bin/brew shellenv)"
