@@ -5,7 +5,7 @@ ZSH_THEME="ys"
 #ZSH_THEME="linuxonly"
 #ZSH_THEME="af-magic"
 
-plugins=(git fzf-tab zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git fzf-tab zsh-syntax-highlighting zsh-autosuggestions zsh-vi-mode colored-man-pages)
 
 HISTFILE="${ZSH}/cache/.zsh_history"
 ZSH_COMPDUMP="${ZSH}/cache/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
@@ -35,30 +35,6 @@ alias "ll"="ls -l"
 alias "rm"="rm -i"
 alias "lg"="lazygit"
 
-#  -------------------- scripts --------------------
-source "${HOME}/.fzf_config.sh"
-my_scripts_dir="/etc/deploy_etc/scripts/"
-my_scripts=(
-    "script_shell/shell_utils.sh"
-    "script_shell/shell_cl.sh"
-    "script_shell/shell_tree_du.sh"
-    "script_shell/shell_man_nvim.sh"
-    "script_out/out_go.sh"
-    "script_fzf/fzf_search.sh"
-    "script_fzf/fzf_edit.sh"
-    "script_fzf/fzf_jump.sh"
-    "script_fzf/fzf_history.sh"
-)
-
-for single_script in "${my_scripts[@]}"; do
-    current_script="${my_scripts_dir}${single_script}"
-    if [[ ! -f ${current_script} ]]; then
-        echo "${current_script} does not exist"
-    else
-        source "${current_script}"
-    fi
-done
-
 # --------------------- nvm --------------------
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -69,8 +45,8 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # -----------------------  go ------------------
-# export GOPATH="$HOME/go"
-# export PATH="$PATH:$(go env GOPATH)/bin"
+export GOPATH="$HOME/go"
+#export PATH="$PATH:$(go env GOPATH)/bin"
 
 # ---------------------- brew ------------------
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -98,3 +74,26 @@ export PATH="$PATH:/opt/homebrew/bin/git-lfs"
 # ---------------------- JAVA HOME --------------------
 export JAVA_HOME="$(/usr/libexec/java_home)"
 export PATH=$JAVA_HOME/bin:$PATH
+
+# -------------------- scripts --------------------
+my_scripts_dir="/opt/deploy_opt/scripts/"
+my_scripts=(
+    "script_utils/utils.sh"
+    "script_shell/shell_cl.sh"
+    "script_shell/shell_tree_du.sh"
+    "script_shell/shell_man_nvim.sh"
+    "script_out/out_go.sh"
+    "script_fzf/fzf_source.sh"
+    "script_fzf/fzf_grep.sh"
+    "script_fzf/fzf_search.sh"
+    "script_fzf/fzf_history.sh"
+)
+
+for single_script in "${my_scripts[@]}"; do
+    current_script="${my_scripts_dir}${single_script}"
+    if [[ ! -f ${current_script} ]]; then
+        echo "${current_script} does not exist"
+    else
+        source "${current_script}"
+    fi
+done
