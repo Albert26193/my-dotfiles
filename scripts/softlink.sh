@@ -1,17 +1,15 @@
 #!/bin/bash
 
 # source utils functions
-source "./utils.sh"
+git_root=$(git rev-parse --show-toplevel 2>/dev/null)
+source "${git_root}/scripts/utils.sh"
 
 ###################################################
 # description: link all dot files to target path
 #      return: nothing
 ###################################################
 function create_config_softlinks {
-
-    local git_root=$(git rev-parse --show-toplevel 2>/dev/null)
     local dot_file_dirs="${git_root}/dotfiles"
-
     local home_dot_path="${dot_file_dirs}/home_dot_files"
     local home_dot_files=($(ls -al ${home_dot_path} | tail -n +4 | awk '{print $9}'))
     local config_dot_path="${dot_file_dirs}/config_dot_files"
@@ -50,12 +48,39 @@ function link_single_file {
         utils_print_red_line "   path: $1"
         utils_print_red_line "Now, Exit..."
         utils_print_white_line "----------------------------------------"
-        return 0
+        return 1
+    fi
+
+    # if target file path is a soft link and point to origin file
+    if [[ -L "${target_file}" && "$(readlink ${target_file})" == "${origin_file}" ]]; then
+        utils_print_white_line "----------------------------------------"
+        utils_print_info "!Info!"
+        utils_print_white_line ": your target file is a soft link and point to origin file"
+        utils_print_green_line "  path: "${target_file}""
+        utils_print_white_line "----------------------------------------"
+        return 1
+    fi
+
+    # if target file path is a soft link, but not point to any file
+    if [[ -L "${target_file}" && ! -f ${target_file} ]]; then
+        utils_print_white_line "----------------------------------------"
+        utils_print_warning "!WARNING!"
+        utils_print_yellow_line ": your target file is a soft link, but not point any file"
+        utils_print_green_line "     path: "${target_file}""
+        utils_print_white_line "----------------------------------------"
+        utils_print_white "remove soft link: "
+        rm -r "${target_file}"
+        if [[ $? -eq 0 ]]; then
+            utils_print_green_line "remove soft link success"
+        else
+            utils_print_red_line "remove soft link failed"
+            return 1
+        fi
     fi
 
     # if target file exist
     # choose overwrite or not
-    if [[ -f "${target_file}" ]]; then
+    if [[ -e "${target_file}" ]]; then
         utils_print_white_line "--------------------------------------"
         utils_print_warning "!WARNING!"
         utils_print_yellow_line ": you have origin config file exist"
@@ -67,21 +92,26 @@ function link_single_file {
             utils_print_info_line "${target_file}.backup"
         else
             utils_print_white_line "Now, Exit..."
-            return 0
+            return 1
         fi
     fi
 
     # create soft link
-    utils_print_white "create softlink: "
+    utils_print_white "create soft link: "
     utils_print_info_line "${origin_file} --> ${target_file}"
     ln -s "${origin_file}" "${target_file}"
 
     if [[ $? -eq 0 ]]; then
         utils_print_green_line "create soft link success"
+        printf "\n"
         return 0
+    else
+        utils_print_red_line "create soft link failed"
+        printf "\n"
+        return 1
     fi
 
-    return 1
+    return 0
 }
 
 # call main function
