@@ -1,6 +1,35 @@
 # my dot Files
 
-> this repo is a container for my dot files, both on Macos and Archlinux 🍺️
+> this repo is a container for my dot files, both on MacOS and ArchLinux 🍺️
+
+## Table of Contents
+- [my dot Files](#my-dot-files)
+  - [0. TL;DR](#0-tldr)
+  - [1.Intro](#1intro)
+    - [1.1 How it works](#11-how-it-works)
+    - [1.2 Config files under `/home/username/`](#12-config-files-under-homeusername)
+    - [1.3 Config files under `/home/username/.config`](#13-config-files-under-homeusernameconfig)
+  - [2.Usage](#2usage)
+    - [2.1. Install](#21-install)
+    - [2.2 Add new config file](#22-add-new-config-file)
+    - [2.3 Automatic backup old config files](#23-automatic-backup-old-config-files)
+  - [3.Todo](#3todo)
+
+## 0. TL;DR
+- run command below to install, first check your os version and checkout the branch you need
+```bash
+# git clone this repo
+git clone https://github.com/Albert26193/my-dotfiles
+
+# checkout the branch you need
+git checkout linux
+
+# cd to this repo
+cd ./my-dotfiles/
+
+# run install script
+bash ./scripts/install.sh
+```
 
 ## 1.Intro
 ### 1.1 How it works
@@ -9,7 +38,7 @@
   - dotfiles under home directory, like `/home/username/.vimrc`
   - dotfiles under config directory, like `/home/username/.config/alacritty.yml`
 
-### 1.2 config files under `/home/username/`
+### 1.2 Config files under `/home/username/`
 - these files are under `./dotfiles/home_dotfiles`
 ```shell
 # dotfiles under /home/username directory
@@ -35,7 +64,7 @@ home_dotfiles
 | .Xresources      | X11/i3   | configuration file for X11 and i3wm, add 4k resolution and some basic xft setting for i3wm | https://www.x.org/wiki/ |
 | .zshrc           | Zsh      | zsh configuration file with oh-my-zsh | https://ohmyz.sh |
 
-### 1.3 config files under `/home/username/.config`
+### 1.3 Config files under `/home/username/.config`
 - these files are under `./dotfiles/config_dotfiles`
 ```shell
 # dotfiles under /home/username/.config directory
@@ -75,6 +104,9 @@ config_dotfiles
 # git clone this repo
 git clone https://github.com/Albert26193/my-dotfiles
 
+# checkout the branch you need
+git checkout linux
+
 # cd to this repo
 cd ./my-dotfiles/
 
@@ -86,7 +118,7 @@ bash ./scripts/install.sh
 - if new config file is under config directory, just add it to `./dotfiles/config_dotfiles`
 - finally, run `bash ./scripts/install.sh` to make symbolic link
 
-### 2.3 automatic backup old config files
+### 2.3 Automatic backup old config files
 
 - when run `bash ./scripts/install.sh`, it will backup old config files by add a suffix `.backup` to the old config file.
 - for example, if you have a `.vimrc` file, it will be backup to `.vimrc.bakcup`
