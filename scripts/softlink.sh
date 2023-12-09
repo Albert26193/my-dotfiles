@@ -10,9 +10,9 @@ source "${git_root}/scripts/utils.sh"
 ###################################################
 function create_config_softlinks {
     local dot_file_dirs="${git_root}/dotfiles"
-    local home_dot_path="${dot_file_dirs}/home_dot_files"
+    local home_dot_path="${dot_file_dirs}/home_dotfiles"
     local home_dot_files=($(ls -al ${home_dot_path} | tail -n +4 | awk '{print $9}'))
-    local config_dot_path="${dot_file_dirs}/config_dot_files"
+    local config_dot_path="${dot_file_dirs}/config_dotfiles"
     local config_dot_files=($(ls -al ${config_dot_path} | tail -n +4 | awk '{print $9}'))
 
     # files which should be linked to ~/.xxx
