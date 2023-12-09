@@ -25,9 +25,6 @@ export LC_ALL=en_US.UTF-8
 # bindkey -v
 export LS_COLORS=${LS_COLORS}:'di=01;35'
 
-# --------------------- starship --------------------
-eval "$(starship init zsh)"
-
 #  --------------------- alias --------------------
 alias "nv"="nvim"
 alias "python"="python3"
@@ -37,6 +34,10 @@ alias "ll"="ls -l"
 alias "rm"="rm -i"
 alias "lg"="lazygit"
 alias "lc"="leetgo"
+
+# ---------------------- brew ------------------
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
 
 # --------------------- nvm --------------------
 export NVM_DIR="$HOME/.nvm"
@@ -54,9 +55,8 @@ export RIME_DIR="$HOME/Library/Rime"
 export GOPATH="$HOME/go"
 #export PATH="$PATH:$(go env GOPATH)/bin"
 
-# ---------------------- brew ------------------
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
+# --------------------- starship --------------------
+eval "$(starship init zsh)"
 
 # ---------------------- conda ------------------
 # >>> conda initialize >>>
