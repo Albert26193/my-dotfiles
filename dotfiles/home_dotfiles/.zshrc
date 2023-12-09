@@ -20,8 +20,43 @@ export LC_ALL=en_US.UTF-8
 export LS_COLORS=${LS_COLORS}:'di=01;35'
 
 #  --------------------- alias --------------------
+alias "pc"="proxychains4"
 alias "nv"="nvim"
 alias "tm"="tmux"
 alias "lg"="lazygit"
 alias "ll"="ls -l"
 alias "la"="ls -al"
+
+# ---------------------  script  -------------------
+my_scripts_dir="/opt/deploy_opt/scripts/"
+my_scripts=(
+    "script_utils/utils.sh"
+    "script_shell/shell_cl.sh"
+    "script_shell/shell_tree_du.sh"
+    "script_shell/shell_man_nvim.sh"
+    "script_out/out_go.sh"
+    "script_fzf/fzf_source.sh"
+    "script_fzf/fzf_grep.sh"
+    "script_fzf/fzf_search.sh"
+    "script_fzf/fzf_history.sh"
+)
+
+for single_script in "${my_scripts[@]}"; do
+    current_script="${my_scripts_dir}${single_script}"
+    if [[ ! -f ${current_script} ]]; then
+        echo "${current_script} does not exist"
+    else
+        source "${current_script}"
+    fi
+done
+
+# ------------------- broadcast ---------------------
+bash "/opt/deploy_opt/broadcast/broadcast.sh"
+
+# ------------------- nvim ---------------------
+export PATH=$PATH:/usr/local/go/bin
+
+# ------------------- nvim ---------------------
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
