@@ -241,7 +241,7 @@ assign [class="^Zotero"] 4
 assign [class="^Datagrip"] 3
 
 ################### cust-desktopom focus ###################
-bindsym --release $win+c exec --no-startup-id xdotool key --clearmodifiers ctrl+c
+bindsym --release $win+c exec --no-startup-id xdotool key --clearmodifiers ctrl+Insert
 bindsym --release $win+p exec --no-startup-id xdotool key --clearmodifiers ctrl+p
 bindsym --release $win+Shift+p exec --no-startup-id xdotool key --clearmodifiers ctrl+Shift+p
 bindsym --release $win+v exec --no-startup-id xdotool key --clearmodifiers Shift+Insert
