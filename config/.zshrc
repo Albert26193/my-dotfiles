@@ -22,8 +22,11 @@ export PATH="/usr/local/opt/ncurses/bin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-bindkey -v
+# bindkey -v
 export LS_COLORS=${LS_COLORS}:'di=01;35'
+
+# --------------------- starship --------------------
+eval "$(starship init zsh)"
 
 #  --------------------- alias --------------------
 alias "pc"="proxychains4"
@@ -34,6 +37,7 @@ alias "tm"="tmux"
 alias "ll"="ls -l"
 alias "rm"="rm -i"
 alias "lg"="lazygit"
+alias "lc"="leetgo"
 
 # --------------------- nvm --------------------
 export NVM_DIR="$HOME/.nvm"
@@ -43,6 +47,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # ---------------------- rust ------------------
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# ---------------------- RIME ------------------
+export RIME_DIR="$HOME/Library/Rime"
 
 # -----------------------  go ------------------
 export GOPATH="$HOME/go"

@@ -18,12 +18,8 @@
   ignorecase = false
 
 [alias]
-  st = status
-  ci = commit
-  co = checkout
-  br = branch
-  df = diff
-  lg = log --all --oneline --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset)'
+  ; lg = log --all --oneline --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset)'
+  lg = log --all --abbrev-commit --oneline --graph --decorate --pretty=format:'%Cblue%h%Creset %<(40,trunc)%s [%C(green)%<(21,trunc)%ai%x08%x08%Creset %Cred%an%Creset%C(yellow)%d%Creset]'
 
 [commit]
 

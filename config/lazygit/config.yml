@@ -2,3 +2,4 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
+  allBranchesLogCmd: 'log --all --abbrev-commit --oneline --graph --decorate --pretty=format:"%Cblue%h%Creset %<(40,trunc)%s [%C(green)%<(21,trunc)%ai%x08%x08%Creset %Cred%an%Creset%C(yellow)%d%Creset]"'
