@@ -53,11 +53,10 @@ function link_single_file {
 
     # if target file path is a soft link and point to origin file
     if [[ -L "${target_file}" && "$(readlink ${target_file})" == "${origin_file}" ]]; then
-        utils_print_white_line "----------------------------------------"
         utils_print_info "!Info!"
         utils_print_white_line ": your target file is a soft link and point to origin file"
         utils_print_green_line "  path: "${target_file}""
-        utils_print_white_line "----------------------------------------"
+        printf "\n"
         return 1
     fi
 
