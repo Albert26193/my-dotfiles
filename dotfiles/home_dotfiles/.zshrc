@@ -27,6 +27,9 @@ alias "lg"="lazygit"
 alias "ll"="ls -l"
 alias "la"="ls -al"
 
+# ------------------- starship ---------------------
+eval "$(starship init zsh)"
+
 # ---------------------  script  -------------------
 my_scripts_dir="/opt/deploy_opt/scripts/"
 my_scripts=(
