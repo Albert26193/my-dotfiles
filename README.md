@@ -30,7 +30,7 @@ git checkout mac
 cd ./my-dotfiles/
 
 # run install script
-bash ./scripts/install.sh
+bash ./scripts/softlink.sh
 ```
 
 ## 1.Intro
