@@ -93,16 +93,16 @@ git checkout mac
 cd ./my-dotfiles/
 
 # run install script
-bash ./scripts/install.sh
+bash ./scripts/softlink.sh
 ```
 ### 2.2 Add new config file
 - if new config file is under home directory, just add it to `./files/home_dotfiles`
 - if new config file is under config directory, just add it to `./files/config_dotfiles`
-- finally, run `bash ./scripts/install.sh` to make symbolic link
+- finally, run `bash ./scripts/softlink.sh` to make symbolic link
 
 ### 2.3 Automatic backup old config files
 
-- when run `bash ./scripts/install.sh`, it will backup old config files by add a suffix `.backup` to the old config file.
+- when run `bash ./scripts/softlink.sh`, it will backup old config files by add a suffix `.backup` to the old config file.
 - for example, if you have a `.vimrc` file, it will be backup to `.vimrc.bakcup`
 
 ## 3.Todo
