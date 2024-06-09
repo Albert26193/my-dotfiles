@@ -2,6 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="ys"
+
 #ZSH_THEME="linuxonly"
 #ZSH_THEME="af-magic"
 
@@ -27,7 +28,6 @@ export LS_COLORS=${LS_COLORS}:'di=01;35'
 
 #  --------------------- alias --------------------
 alias "nv"="nvim"
-alias "python"="python3"
 alias "pip"="pip3"
 alias "tm"="tmux"
 alias "ll"="ls -l"
@@ -82,25 +82,52 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 export PATH=$JAVA_HOME/bin:$PATH
 
 # -------------------- scripts --------------------
-my_scripts_dir="/opt/deploy_opt/scripts/"
-my_scripts=(
-    "script_utils/utils.sh"
-    "script_shell/shell_cl.sh"
-    "script_shell/shell_tree_du.sh"
-    "script_shell/shell_man_nvim.sh"
-    "script_out/out_go.sh"
-    "script_fzf/fzf_source.sh"
-    "script_fzf/fzf_grep.sh"
-    "script_fzf/fzf_search.sh"
-    "script_fzf/fzf_history.sh"
-)
+#my_scripts_dir="/opt/deploy_opt/scripts/"
+#my_scripts=(
+#    "script_utils/utils.sh"
+#    "script_shell/shell_cl.sh"
+#    "script_shell/shell_tree_du.sh"
+#    "script_shell/shell_man_nvim.sh"
+#    "script_out/out_go.sh"
+#    "script_fzf/fzf_source.sh"
+#    "script_fzf/fzf_grep.sh"
+#    "script_fzf/fzf_search.sh"
+#    "script_fzf/fzf_history.sh"
+#)
+#
+#for single_script in "${my_scripts[@]}"; do
+#    current_script="${my_scripts_dir}${single_script}"
+#    if [[ ! -f ${current_script} ]]; then
+#        echo "${current_script} does not exist"
+#    else
+#        source "${current_script}"
+#    fi
+#done
 
-for single_script in "${my_scripts[@]}"; do
-    current_script="${my_scripts_dir}${single_script}"
-    if [[ ! -f ${current_script} ]]; then
-        echo "${current_script} does not exist"
-    else
-        source "${current_script}"
-    fi
-done
+#------------------- lso -------------------
+#source ${HOME}/.lso.env
+source "/opt/lab-server-ops/lso_user/lso.sh"
 
+#alias "fs"="lso_fuzzy_search"
+#alias "jj"="lso_fuzzy_jump"
+#alias "ff"="lso_fuzzy_edit"
+#alias "hh"="lso_fuzzy_history"
+alias "pon"="lso_proxy_on"
+alias "poff"="lso_proxy_off"
+
+alias "jp"="tmux join-pane -t"
+alias "sp"="tmux swap-pane -t"
+alias "sw"="tmux swap-window -t"
+alias "bp"="tmux break-pane -t : "
+alias blog="cd ${HOME}/CodeSpace/my-blog && bash /Users/albertwang/CodeSpace/my-blog/scripts/build.sh"
+
+#------------------- lso -------------------
+PATH=~/.console-ninja/.bin:$PATH
+#------------------- lso -------------------
+source "${HOME}/.fuzzy_mac/scripts/export.sh"
+source "${HOME}/.fuzzy_mac/config.env"
+alias "fs"="fuzzy_mac_search"
+alias "fj"="fuzzy_mac_jump"
+alias "fe"="fuzzy_mac_edit"
+alias "hh"="fuzzy_mac_history"
+#------------------- lso -------------------

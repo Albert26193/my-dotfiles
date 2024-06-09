@@ -15,10 +15,10 @@
 
 # layouts - Ordered list of layouts to use by layout key (default tall, wide, fullscreen, and column).
 layouts:
+  - two-pane
   - widescreen-tall
   - column
   - fullscreen
-  - two-pane
   # - tall
   # - 3column-middle
   # - tall
