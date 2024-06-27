@@ -36,17 +36,11 @@ alias "lg"="lazygit"
 alias "lc"="leetgo"
 
 # ---------------------- brew ------------------
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/usr/local/bin/brew shellenv)"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
 
-# --------------------- nvm --------------------
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-#eval "nvm use default"
-
-# ---------------------- rust ------------------
-export PATH="$HOME/.cargo/bin:$PATH"
+# ---------------------- starship ------------------
+eval "$(starship init zsh)"
 
 # ---------------------- RIME ------------------
 export RIME_DIR="$HOME/Library/Rime"
@@ -55,74 +49,6 @@ export RIME_DIR="$HOME/Library/Rime"
 export GOPATH="$HOME/go"
 #export PATH="$PATH:$(go env GOPATH)/bin"
 
-# --------------------- starship --------------------
-eval "$(starship init zsh)"
-
-# ---------------------- conda ------------------
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# ---------------------- git-lfs ------------------
-export PATH="$PATH:/opt/homebrew/bin/git-lfs"
-
-# ---------------------- JAVA HOME --------------------
-export JAVA_HOME="$(/usr/libexec/java_home)"
-export PATH=$JAVA_HOME/bin:$PATH
-
-# -------------------- scripts --------------------
-#my_scripts_dir="/opt/deploy_opt/scripts/"
-#my_scripts=(
-#    "script_utils/utils.sh"
-#    "script_shell/shell_cl.sh"
-#    "script_shell/shell_tree_du.sh"
-#    "script_shell/shell_man_nvim.sh"
-#    "script_out/out_go.sh"
-#    "script_fzf/fzf_source.sh"
-#    "script_fzf/fzf_grep.sh"
-#    "script_fzf/fzf_search.sh"
-#    "script_fzf/fzf_history.sh"
-#)
-#
-#for single_script in "${my_scripts[@]}"; do
-#    current_script="${my_scripts_dir}${single_script}"
-#    if [[ ! -f ${current_script} ]]; then
-#        echo "${current_script} does not exist"
-#    else
-#        source "${current_script}"
-#    fi
-#done
-
-#------------------- lso -------------------
-#source ${HOME}/.lso.env
-source "/opt/lab-server-ops/lso_user/lso.sh"
-
-#alias "fs"="lso_fuzzy_search"
-#alias "jj"="lso_fuzzy_jump"
-#alias "ff"="lso_fuzzy_edit"
-#alias "hh"="lso_fuzzy_history"
-alias "pon"="lso_proxy_on"
-alias "poff"="lso_proxy_off"
-
-alias "jp"="tmux join-pane -t"
-alias "sp"="tmux swap-pane -t"
-alias "sw"="tmux swap-window -t"
-alias "bp"="tmux break-pane -t : "
-alias blog="cd ${HOME}/CodeSpace/my-blog && bash /Users/albertwang/CodeSpace/my-blog/scripts/build.sh"
-
-#------------------- lso -------------------
-PATH=~/.console-ninja/.bin:$PATH
 #------------------- lso -------------------
 source "${HOME}/.fuzzy_mac/scripts/export.sh"
 source "${HOME}/.fuzzy_mac/config.env"
@@ -130,4 +56,18 @@ alias "fs"="fuzzy_mac_search"
 alias "fj"="fuzzy_mac_jump"
 alias "fe"="fuzzy_mac_edit"
 alias "hh"="fuzzy_mac_history"
-#------------------- lso -------------------
+
+#------------------- conda  -------------------
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+

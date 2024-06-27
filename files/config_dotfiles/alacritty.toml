@@ -67,29 +67,29 @@ background = "#282a36"
 style = "Block"
 
 [font]
-size = 18
+size = 17
 
 [font.bold]
-# family = "FiraCode Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-# family = "FiraCode Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-# family = "FiraCode Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Italic"
 
 [font.normal]
-# family = "FiraCode Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Regular"
 
 [window]
 blur = true
 decorations = "none"
 dynamic_padding = true
-opacity = 0.75
+opacity = 0.95
 
 [window.dimensions]
 columns = 80
