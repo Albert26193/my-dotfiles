@@ -89,7 +89,7 @@ style = "Regular"
 blur = true
 decorations = "none"
 dynamic_padding = true
-opacity = 0.95
+opacity = 0.85
 
 [window.dimensions]
 columns = 80

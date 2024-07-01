@@ -1,15 +1,13 @@
 format = '''
-[┌───────────────────>](bold cyan)
-$all'''
+(bold green) $all'''
 
 [hostname]
 ssh_only = false
 disabled = false
-style="green"
-ssh_symbol='🚀'
+format = '🚀 [Mac-Pro](bold green) on '
 
 [character]
-success_symbol = '[└─>](bold cyan)'
+success_symbol = '[ └─>](bold green)'
 
 [git_commit]
 commit_hash_length = 6
@@ -194,8 +192,8 @@ format = '\[[$symbol$workspace]($style)\]'
 format = '\[[$time]($style)\]'
 
 [username]
-format = '[│](bold cyan) [ $user](bold) '
-show_always = true
+format = '[$user](bold cyan) '
+show_always = false
 
 [vagrant]
 format = '\[[$symbol($version)]($style)\]'
@@ -208,4 +206,5 @@ format = '\[[$symbol($version)]($style)\]'
 
 [solidity]
 format = '\[[$symbol($version)]($style)\]'
+
 
