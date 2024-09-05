@@ -6,6 +6,8 @@
 #
 # Instructions
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd
+
+# Dracula
 [colors.primary]
 background = "#282a36"
 foreground = "#f8f8f2"
@@ -43,31 +45,115 @@ magenta = "#ff92df"
 cyan = "#a4ffff"
 white = "#ffffff"
 
+# [colors.search.matches]
+# foreground = "#44475a"
+# background = "#50fa7b"
+#
+# [colors.search.focused_match]
+# foreground = "#44475a"
+# background = "#ffb86c"
+#
+# [colors.footer_bar]
+# background = "#282a36"
+# foreground = "#f8f8f2"
+#
+# [colors.hints.start]
+# foreground = "#282a36"
+# background = "#f1fa8c"
+#
+# [colors.hints.end]
+# foreground = "#f1fa8c"
+# background = "#282a36"
+
+# Colors (Ayu Dark)
+# Default colors
+#[colors.primary]
+#background = '#0A0E14'
+#foreground = '#B3B1AD'
+## Normal colors
+#[colors.normal]
+#black   = '#01060E'
+#red     = '#EA6C73'
+#green   = '#91B362'
+#yellow  = '#F9AF4F'
+#blue    = '#53BDFA'
+#magenta = '#FAE994'
+#cyan    = '#90E1C6'
+#white   = '#C7C7C7'
+## Bright colors
+#[colors.bright]
+#black   = '#686868'
+#red     = '#F07178'
+#green   = '#C2D94C'
+#yellow  = '#FFB454'
+#blue    = '#59C2FF'
+#magenta = '#FFEE99'
+#cyan    = '#95E6CB'
+#white   = '#FFFFFF'
+
+# iTerm2 Material Design - Palenight theme for Alacritty
+# Source  https//github.com/JonathanSpeek/palenight-iterm2
+
+# palenight
+#[colors.primary]
+#background = '#292d3e'
+#foreground = '#d0d0d0'
+## Normal colors
+#[colors.normal]
+#black   = '#292d3e'
+#red     = '#f07178'
+#green   = '#c3e88d'
+#yellow  = '#ffcb6b'
+#blue    = '#82aaff'
+#magenta = '#c792ea'
+#cyan    = '#89ddff'
+#white   = '#d0d0d0'
+## Bright colors
+#[colors.bright]
+#black   = '#434758'
+#red     = '#ff8b92'
+#green   = '#ddffa7'
+#yellow  = '#ffe585'
+#blue    = '#9cc4ff'
+#magenta = '#e1acff'
+#cyan    = '#a3f7ff'
+#white   = '#ffffff'
+
+
+# tokyo night
+# [colors.primary]
+# background = '#1a1b26'
+# foreground = '#a9b1d6'
+# # Normal colors
+# [colors.normal]
+# black   = '#32344a'
+# red     = '#f7768e'
+# green   = '#9ece6a'
+# yellow  = '#e0af68'
+# blue    = '#7aa2f7'
+# magenta = '#ad8ee6'
+# cyan    = '#449dab'
+# white   = '#787c99'
+# # Bright colors
+# [colors.bright]
+# black   = '#444b6a'
+# red     = '#ff7a93'
+# green   = '#b9f27c'
+# yellow  = '#ff9e64'
+# blue    = '#7da6ff'
+# magenta = '#bb9af7'
+# cyan    = '#0db9d7'
+# white   = '#acb0d0'
+
 [colors.search.matches]
-foreground = "#44475a"
-background = "#50fa7b"
-
-[colors.search.focused_match]
-foreground = "#44475a"
-background = "#ffb86c"
-
-[colors.footer_bar]
-background = "#282a36"
-foreground = "#f8f8f2"
-
-[colors.hints.start]
-foreground = "#282a36"
-background = "#f1fa8c"
-
-[colors.hints.end]
-foreground = "#f1fa8c"
-background = "#282a36"
+# foreground= CellBackground
+background= '#69e7ef'
 
 [cursor]
 style = "Block"
 
 [font]
-size = 17
+size = 14
 
 [font.bold]
 family = "FiraCode Nerd Font"
@@ -89,7 +175,7 @@ style = "Regular"
 blur = true
 decorations = "none"
 dynamic_padding = true
-opacity = 0.85
+opacity = 1
 
 [window.dimensions]
 columns = 80
