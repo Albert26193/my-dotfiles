@@ -3,7 +3,7 @@
 # Color Palette
 # Tokyonight Night
 BLACK=0xff24283b
-WHITE=0xffa9b1d6
+WHITE=0xffe9f1f6
 MAGENTA=0xffbb9af7
 BLUE=0xff7aa2f7
 CYAN=0xff7dcfff
@@ -48,3 +48,5 @@ CORNER_RADIUS=15
 BORDER_WIDTH=2
 
 SHADOW=on
+
+# FOCUSED_WORKSPACE=0
