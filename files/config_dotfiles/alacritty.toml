@@ -12,19 +12,15 @@
 background = "#282a36"
 foreground = "#f8f8f2"
 bright_foreground = "#ffffff"
-
 [colors.cursor]
 text = "#282a36"
 cursor = "#f8f8f2"
-
 [colors.vi_mode_cursor]
 text = "CellBackground"
 cursor = "CellForeground"
-
 [colors.selection]
 text = "CellForeground"
 background = "#44475a"
-
 [colors.normal]
 black = "#21222c"
 red = "#ff5555"
@@ -34,7 +30,6 @@ blue = "#bd93f9"
 magenta = "#ff79c6"
 cyan = "#8be9fd"
 white = "#f8f8f2"
-
 [colors.bright]
 black = "#6272a4"
 red = "#ff6e6e"
@@ -44,26 +39,18 @@ blue = "#d6acff"
 magenta = "#ff92df"
 cyan = "#a4ffff"
 white = "#ffffff"
-
-# [colors.search.matches]
-# foreground = "#44475a"
-# background = "#50fa7b"
-#
-# [colors.search.focused_match]
-# foreground = "#44475a"
-# background = "#ffb86c"
-#
-# [colors.footer_bar]
-# background = "#282a36"
-# foreground = "#f8f8f2"
-#
-# [colors.hints.start]
-# foreground = "#282a36"
-# background = "#f1fa8c"
-#
-# [colors.hints.end]
-# foreground = "#f1fa8c"
-# background = "#282a36"
+[colors.search.matches]
+foreground = "#44475a"
+background = "#50fa7b"
+[colors.footer_bar]
+background = "#282a36"
+foreground = "#f8f8f2"
+[colors.hints.start]
+foreground = "#282a36"
+background = "#f1fa8c"
+[colors.hints.end]
+foreground = "#f1fa8c"
+background = "#282a36"
 
 # Colors (Ayu Dark)
 # Default colors
@@ -91,9 +78,6 @@ white = "#ffffff"
 #cyan    = '#95E6CB'
 #white   = '#FFFFFF'
 
-# iTerm2 Material Design - Palenight theme for Alacritty
-# Source  https//github.com/JonathanSpeek/palenight-iterm2
-
 # palenight
 #[colors.primary]
 #background = '#292d3e'
@@ -119,7 +103,6 @@ white = "#ffffff"
 #cyan    = '#a3f7ff'
 #white   = '#ffffff'
 
-
 # tokyo night
 # [colors.primary]
 # background = '#1a1b26'
@@ -144,10 +127,8 @@ white = "#ffffff"
 # magenta = '#bb9af7'
 # cyan    = '#0db9d7'
 # white   = '#acb0d0'
-
-[colors.search.matches]
-# foreground= CellBackground
-background= '#69e7ef'
+# [colors.search.matches]
+# background= '#69e7ef'
 
 [cursor]
 style = "Block"
@@ -173,7 +154,7 @@ style = "Regular"
 
 [window]
 blur = true
-decorations = "none"
+# decorations = "none"
 dynamic_padding = true
 opacity = 1
 
@@ -182,5 +163,5 @@ columns = 80
 lines = 25
 
 [window.padding]
-x = 8
-y = 8
+x = 0
+y = 4

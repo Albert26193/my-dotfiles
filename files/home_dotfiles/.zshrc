@@ -36,7 +36,8 @@ alias "lg"="lazygit"
 alias "lc"="leetgo"
 
 # ---------------------- brew ------------------
-eval "$("$(which brew)" shellenv)"
+# eval "$("$(which brew)" shellenv)"
+export PATH=/opt/homebrew/bin:$PATH
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
 
 # ---------------------- starship ------------------
