@@ -4,7 +4,7 @@ format = '''
 [hostname]
 ssh_only = false
 disabled = false
-format = '🚀 [Mac-Pro](bold green) on '
+format = '🚀 [$hostname](bold green) on '
 
 [character]
 success_symbol = '[ └─>](bold green)'

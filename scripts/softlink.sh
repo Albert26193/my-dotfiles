@@ -10,9 +10,9 @@ source "${git_root}/scripts/utils.sh"
 ###################################################
 function create_config_softlinks {
 	local dot_file_dirs="${git_root}/files"
-	local home_dot_path="${dot_file_dirs}/home_dotfiles"
+	local home_dot_path="${dot_file_dirs}/home"
 	local home_dot_files=($(ls -al ${home_dot_path} | tail -n +4 | awk '{print $9}'))
-	local config_dot_path="${dot_file_dirs}/config_dotfiles"
+	local config_dot_path="${dot_file_dirs}/config"
 	local config_dot_files=($(ls -al ${config_dot_path} | tail -n +4 | awk '{print $9}'))
 
 	# files which should be linked to ~/.xxx
@@ -43,7 +43,7 @@ function link_single_file {
 	# if origin file not exist
 	if [[ ! -e "${origin_file}" ]]; then
 		utils_print_white_line "----------------------------------------"
-		utils_print_error "!Error!"
+		utils_print_red "!Error!"
 		utils_print_red_line ": you should provide origin file"
 		utils_print_red_line "   path: $1"
 		utils_print_red_line "Now, Exit..."
@@ -53,7 +53,8 @@ function link_single_file {
 
 	# if target file path is a soft link and point to origin file
 	if [[ -L "${target_file}" && "$(readlink ${target_file})" == "${origin_file}" ]]; then
-		utils_print_info "!Info!"
+		utils_print_green_line "----------------------------------------"
+		utils_print_green "!Info!"
 		utils_print_white_line ": your target file is a soft link and point to origin file"
 		utils_print_green_line "  path: "${target_file}""
 		printf "\n"
@@ -81,7 +82,7 @@ function link_single_file {
 	# choose overwrite or not
 	if [[ -e "${target_file}" ]]; then
 		utils_print_white_line "--------------------------------------"
-		utils_print_warning "!WARNING!"
+		utils_print_yellow "!WARNING!"
 		utils_print_yellow_line ": you have origin config file exist"
 		utils_print_green_line "     path: "${target_file}""
 		utils_print_white_line "--------------------------------------"

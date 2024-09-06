@@ -74,7 +74,7 @@ outer.right =      0
 # 'main' binding mode must be always presented
 [mode.main.binding]
 cmd-h = [] # Disable "hide application"
-cmd-alt-h = [] # Disable "hide others"
+# cmd-alt-h = [] # Disable "hide others"
 
 # All possible keys:
 # - Letters.        a, b, c, ..., z

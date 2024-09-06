@@ -301,7 +301,7 @@ window-resize-step: 5
 #############################################
 screen-padding-left: 0
 screen-padding-right: 0
-screen-padding-top: 0
+screen-padding-top: 40
 screen-padding-bottom: 0
 
 # true to maintain layout state across application executions (default true).

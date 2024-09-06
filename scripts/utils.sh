@@ -39,11 +39,11 @@ utils_print_white() { printf "${UTILS_COLOR_WHITE}%s${UTILS_COLOR_RESET} " "$1";
 
 utils_print_warning_line() { printf "${UTILS_BACKGROUND_YELLOW}${UTILS_COLOR_WHITE}%s${UTILS_COLOR_RESET}\n" "$1"; }
 utils_print_error_line() { printf "${UTILS_BACKGROUND_RED}${UTILS_COLOR_WHITE}%s${UTILS_COLOR_RESET}\n" "$1"; }
-utils_print_info_line() { printf "${UTILS_BACKGROUND_GREEN}${UTILS_COLOR_WHITE}%s${UTILS_COLOR_RESET}\n" "$1"; }
+utils_print_info_line() { printf "${UTILS_BACKGROUND_GREEN}%s${UTILS_COLOR_RESET}\n" "$1"; }
 
 utils_print_warning() { printf "${UTILS_BACKGROUND_YELLOW}${UTILS_COLOR_WHITE}%s${UTILS_COLOR_RESET}" "$1"; }
 utils_print_error() { printf "${UTILS_BACKGROUND_RED}${UTILS_COLOR_WHITE}%s${UTILS_COLOR_RESET}" "$1"; }
-utils_print_info() { printf "${UTILS_BACKGROUND_GREEN}${UTILS_COLOR_WHITE}%s${UTILS_COLOR_RESET}" "$1"; }
+utils_print_info() { printf "${UTILS_BACKGROUND_GREEN}%s${UTILS_COLOR_RESET}" "$1"; }
 
 ###################################################
 # description: give colorful yn_prompt
