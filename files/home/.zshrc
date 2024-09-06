@@ -26,9 +26,6 @@ export LS_COLORS=${LS_COLORS}:'di=01;35'
 #  --------------------- alias --------------------
 alias "nv"="nvim"
 alias "pip"="pip3"
-alias "tm"="tmux"
-alias "ll"="ls -l"
-alias "rm"="rm -i"
 alias "lg"="lazygit"
 alias "lc"="leetgo"
 
