@@ -29,20 +29,21 @@ start-at-login = false
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
-enable-normalization-opposite-orientation-for-nested-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = false
 
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 10
+accordion-padding = 40
 
 # Possible values: tiles|accordion
-default-root-container-layout = 'tiles'
+default-root-container-layout = 'accordion'
 
 # Possible values: horizontal|vertical|auto
 # 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
 #               tall monitor (anything higher than wide) gets vertical orientation
-default-root-container-orientation = 'auto'
+#default-root-container-orientation = 'horizontal'
+default-root-container-orientation = 'vertical'
 
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -62,6 +63,7 @@ on-focus-changed = ['move-mouse window-lazy-center']
 #                 In this example, 24 is a default value when there is no match.
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
+
 [gaps]
 inner.horizontal = 8
 inner.vertical =   2
@@ -73,10 +75,6 @@ outer.right =      0
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
-[mode.main.binding]
-cmd-h = [] # Disable "hide application"
-# cmd-alt-h = [] # Disable "hide others"
-
 # All possible keys:
 # - Letters.        a, b, c, ..., z
 # - Numbers.        0, 1, 2, ..., 9
@@ -87,11 +85,8 @@ cmd-h = [] # Disable "hide application"
 # - Keypad special. keypadClear, keypadDecimalMark, keypadDivide, keypadEnter, keypadEqual,
 #                   keypadMinus, keypadMultiply, keypadPlus
 # - Arrows.         left, down, up, right
-
 # All possible modifiers: cmd, alt, ctrl, shift
-
 # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
-
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # You can uncomment the following lines to open up terminal with alt + enter shortcut (like in i3)
 # alt-enter = '''exec-and-forget osascript -e '
@@ -101,13 +96,26 @@ cmd-h = [] # Disable "hide application"
 # end tell'
 # '''
 
+[mode.main.binding]
+# Disable "hide application"
+cmd-h = []
+
+# i3 like
+# alt-h = 'split horizontal'
+# alt-v = 'split vertical'
+alt-f = 'fullscreen'
+alt-s = 'layout v_accordion' # 'layout stacking' in i3
+alt-w = 'layout h_accordion' # 'layout tabbed' in i3
+# alt-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
+alt-shift-space = 'layout floating tiling'
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
-alt-f = 'fullscreen'
+alt-comma = 'layout accordion vertical horizontal'
+# alt-comma = 'layout accordion vertical'
+# alt-comma = 'layout accordion horizontal'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-
 alt-cmd-h = 'focus left'
 alt-cmd-j = 'focus down'
 alt-cmd-k = 'focus up'
@@ -136,22 +144,12 @@ alt-9 = 'workspace 9'
 alt-0 = 'workspace 0'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-# put config to skhd
-# alt-shift-1 = 'move-node-to-workspace 1'
-# alt-shift-2 = 'move-node-to-workspace 2'
-# alt-shift-3 = 'move-node-to-workspace 3'
-# alt-shift-4 = 'move-node-to-workspace 4'
-# alt-shift-5 = 'move-node-to-workspace 5'
-# alt-shift-6 = 'move-node-to-workspace 6'
-# alt-shift-7 = 'move-node-to-workspace 7'
-# alt-shift-8 = 'move-node-to-workspace 8'
-# alt-shift-9 = 'move-node-to-workspace 9'
-# alt-shift-0 = 'move-node-to-workspace 0'
+# put alt-shift config to skhd
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
-# alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-# alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+alt-tab = 'workspace-back-and-forth'
+alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
@@ -182,6 +180,10 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.window-title-regex-substring = '(Excalidraw*)'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.window-title-regex-substring = '(Clash Verge)'
 run = 'layout floating'
 
 [[on-window-detected]]
