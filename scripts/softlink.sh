@@ -98,7 +98,7 @@ function link_single_file {
 
 	# create soft link
 	utils_print_white "create soft link: "
-	utils_print_info_line "${origin_file} --> ${target_file}"
+	utils_print_green_line "${origin_file} --> ${target_file}"
 	ln -s "${origin_file}" "${target_file}"
 
 	if [[ $? -eq 0 ]]; then

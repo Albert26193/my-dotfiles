@@ -43,13 +43,14 @@ export RIME_DIR="$HOME/Library/Rime"
 export GOPATH="$HOME/go"
 #export PATH="$PATH:$(go env GOPATH)/bin"
 
-#------------------- lso -------------------
-source "${HOME}/.fuzzy_mac/scripts/export.sh"
-source "${HOME}/.fuzzy_mac/config.env"
-alias "fs"="fuzzy_mac_search"
-alias "fj"="fuzzy_mac_jump"
-alias "fe"="fuzzy_mac_edit"
-alias "hh"="fuzzy_mac_history"
+#------------------- fuzzy-shell -------------------
+source "${HOME}/.fuzzy_shell/scripts/export.sh"
+source "${HOME}/.fuzzy_shell/config.env"
+
+alias "fs"="fuzzy --search"
+alias "fj"="fuzzy --jump"
+alias "fe"="fuzzy --edit"
+alias "fh"="fuzzy --history"
 
 #------------------- conda  -------------------
 # !! Contents within this block are managed by 'conda init' !!
