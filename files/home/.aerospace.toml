@@ -178,6 +178,10 @@ run = 'layout floating'
 if.window-title-regex-substring = '(setting|设置)'
 run = 'layout floating'
 
+# [[on-window-detected]]
+# if.window-title-regex-substring = '(阿里云盘)'
+# run = 'layout floating'
+
 [[on-window-detected]]
 if.window-title-regex-substring = '(Excalidraw*)'
 run = 'layout floating'

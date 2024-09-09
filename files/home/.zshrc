@@ -5,7 +5,7 @@ ZSH_THEME="ys"
 
 plugins=(git fzf-tab zsh-syntax-highlighting zsh-autosuggestions zsh-vi-mode colored-man-pages)
 
-HISTFILE="${ZSH}/cache/.zsh_history"
+HISTFILE="${ZSH}/.zsh_history"
 ZSH_COMPDUMP="${ZSH}/cache/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
 source $ZSH/oh-my-zsh.sh
