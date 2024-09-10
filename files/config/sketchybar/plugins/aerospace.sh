@@ -7,16 +7,17 @@ SPACE_ICONS=("0:TERM" "1:VSC" "2:WEB" "3:TOOL" "4:NOTE" "5:DOC" "6:WORK" "7:ENT"
 sid=$1
 if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
 	sketchybar --animate tanh 5 --set "$NAME" \
+		icon.drawing=on \
+		background.drawing=on \
+		label.drawing=off \
 		icon.color="$BLACK" \
 		icon="${SPACE_ICONS[$sid]}" \
-		label.color="$WHITE" \
-		background.drawing=on
+		label.color="$WHITE"
 else
 	sketchybar --animate tanh 5 --set "$NAME" \
-		icon.color="$CYAN" \
-		icon="${SPACE_ICONS[$sid]}" \
-		label.color="$WHITE" \
-		icon.border=on \
-		icon.border_color="$WHITE" \
-		background.drawing=off
+		label.drawing=on \
+		label.color="$CYAN" \
+		background.drawing=off \
+		label="$sid" \
+		icon.drawing=off
 fi

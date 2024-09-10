@@ -64,7 +64,7 @@ function link_single_file {
 	# if target file path is a soft link, but not point to any file
 	if [[ -L "${target_file}" && ! -f ${target_file} ]]; then
 		utils_print_white_line "----------------------------------------"
-		utils_print_warning "!WARNING!"
+		utils_print_yellow "!WARNING!"
 		utils_print_yellow_line ": your target file is a soft link, but not point any file"
 		utils_print_green_line "     path: "${target_file}""
 		utils_print_white_line "----------------------------------------"

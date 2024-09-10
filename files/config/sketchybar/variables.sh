@@ -13,6 +13,8 @@ ORANGE=0xffff9e64
 RED=0xfff7768e
 BAR_COLOR=0xff1a1b26
 COMMENT=0xff565f89
+LIGHT_GREEN=0xff60fc5d
+DARK_BLUE=0xff2e76ef
 
 # Tokyonight Day
 # BLACK=0xffe9e9ed

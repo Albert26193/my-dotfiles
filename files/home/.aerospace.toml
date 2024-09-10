@@ -159,9 +159,10 @@ alt-shift-semicolon = 'mode service'
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
+b = ['balance-sizes', 'mode main'] # reset layout
 #s = ['layout sticky tiling', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
 f = ['layout floating tiling', 'mode main']
-backspace = ['close-all-windows-but-current', 'mode main']
+c = ['close-all-windows-but-current', 'mode main']
 
 alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
@@ -178,17 +179,9 @@ run = 'layout floating'
 if.window-title-regex-substring = '(setting|设置)'
 run = 'layout floating'
 
-# [[on-window-detected]]
-# if.window-title-regex-substring = '(阿里云盘)'
-# run = 'layout floating'
-
 [[on-window-detected]]
 if.window-title-regex-substring = '(Excalidraw*)'
 run = 'layout floating'
-
-[[on-window-detected]]
-if.window-title-regex-substring = '(Clash Verge)'
-run = ['layout floating', 'move-node-to-workspace 8']
 
 [[on-window-detected]]
 if.window-title-regex-substring = '(Picture-in-Picture|画中画)'
@@ -219,6 +212,10 @@ if.app-id = 'notion.id'
 run = ['move-node-to-workspace 4']
 
 [[on-window-detected]]
+if.window-title-regex-substring = '(阿里云盘)'
+run = ['move-node-to-workspace 7']
+
+[[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = ['move-node-to-workspace 8']
 
@@ -231,11 +228,23 @@ if.app-id = 'com.apple.finder'
 run = ['move-node-to-workspace 8']
 
 [[on-window-detected]]
+if.app-id = 'imagetasks.iStatistica-Pro'
+run = ['move-node-to-workspace 8']
+
+[[on-window-detected]]
 if.app-id = 'com.sangfor.Easyconnect'
 run = ['move-node-to-workspace 8']
 
 [[on-window-detected]]
+if.window-title-regex-substring = '(Clash Verge)'
+run = ['move-node-to-workspace 8']
+
+[[on-window-detected]]
 if.app-id = 'com.tdesktop.Telegram'
+run = ['move-node-to-workspace 9']
+
+[[on-window-detected]]
+if.app-id = 'com.tencent.qq'
 run = ['move-node-to-workspace 9']
 
 [[on-window-detected]]
