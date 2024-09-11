@@ -5,10 +5,12 @@ if lsappinfo -all list | grep $NAME >>/dev/null; then
 	if [[ $LABEL =~ ^\".*\"$ ]]; then
 		LABEL=$(echo $LABEL | sed 's/^"//' | sed 's/"$//')
 		if [ -z "$LABEL" ]; then
-			LABEL=0
+			# LABEL=0
+			LABEL=""
 		fi
 	else
-		LABEL=0
+		# LABEL=0
+		# LABEL=0
 	fi
 else
 	LABEL="?"
