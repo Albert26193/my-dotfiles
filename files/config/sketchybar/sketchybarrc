@@ -39,7 +39,6 @@ sketchybar --bar height=30 \
 # source "$ITEM_DIR/spaces.sh"
 source "${ITEM_DIR}/apple.sh"
 source "${ITEM_DIR}/aerospace.sh"
-source "${ITEM_DIR}/aerospace_mode.sh"
 
 # Center (of notch)
 source "${ITEM_DIR}/front_app.sh"
