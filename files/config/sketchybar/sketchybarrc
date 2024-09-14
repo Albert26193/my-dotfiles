@@ -52,6 +52,7 @@ source "${ITEM_DIR}/volume.sh"
 source "${ITEM_DIR}/cpu.sh"
 source "${ITEM_DIR}/input_source.sh"
 source "${ITEM_DIR}/qq.sh"
+source "${ITEM_DIR}/feishu.sh"
 source "${ITEM_DIR}/tg.sh"
 source "${ITEM_DIR}/wechat.sh"
 
