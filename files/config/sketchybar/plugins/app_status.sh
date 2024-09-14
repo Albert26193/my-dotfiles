@@ -28,8 +28,6 @@ else
 	LABEL="?"
 fi
 
-echo $NAME >>~/1111
-echo $SENDER >>~/1111
 sketchybar --set $NAME label=$LABEL \
 	label.padding_right=${app_padding} \
 	drawing="$(check_running $NAME)" \
