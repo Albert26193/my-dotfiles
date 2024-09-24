@@ -1,7 +1,7 @@
 #!/bin/bash
 
 qq=(
-	update_freq=10
+	update_freq=5
 	icon=""
 	icon.color=$WHITE
 	icon.font="$FONT:Regular:15.0"

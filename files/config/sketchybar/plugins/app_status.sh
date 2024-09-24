@@ -3,7 +3,7 @@
 # $1: app name
 function check_running {
 	local app_name=$1
-	if aerospace list-apps | grep -qi "$app_name"; then
+	if lsappinfo -all list | grep -qi "$app_name"; then
 		echo "on"
 		return 0
 	fi
@@ -28,6 +28,7 @@ else
 	LABEL="?"
 fi
 
+# update_freq=5 \
+# drawing="$(check_running $NAME)"
 sketchybar --set $NAME label=$LABEL \
-	label.padding_right=${app_padding} \
-	drawing="$(check_running $NAME)" \
+	label.padding_right=${app_padding}

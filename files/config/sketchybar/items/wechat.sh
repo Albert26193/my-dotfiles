@@ -1,7 +1,7 @@
 #!/bin/bash
 
 wechat=(
-	update_freq=10
+	update_freq=5
 	icon=""
 	icon.color=$BLACK
 	icon.font="$FONT:Regular:20.0"
