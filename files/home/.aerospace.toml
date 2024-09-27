@@ -180,7 +180,7 @@ if.window-title-regex-substring = '(setting|设置)'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.window-title-regex-substring = '(Excalidraw*)'
+if.app-id = 'com.google.Chrome.app.kmcnjdcipmgchfndpapkoecbidofdpbc'
 run = 'layout floating'
 
 [[on-window-detected]]
@@ -196,7 +196,15 @@ if.app-id = 'com.microsoft.VSCode'
 run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92'
+run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
 if.app-id = 'com.google.Chrome'
+run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
 run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
