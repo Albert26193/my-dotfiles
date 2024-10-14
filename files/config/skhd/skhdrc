@@ -14,8 +14,8 @@ alt + shift - 0: aerospace move-node-to-workspace 0 && aerospace workspace 0
 alt - j : open -a "/Applications/Alacritty.app"
 # alt - n : open -a '/Applications/Visual Studio Code.app/'
 alt - n : open -a '/Applications/Cursor.app'
-# alt - u : open -a '/Applications/Google Chrome.app'
-alt - u : open -a '/Applications/Arc.app'
+alt - u : open -a '/Applications/Google Chrome.app'
+# alt - u : open -a '/Applications/Arc.app'
 alt - k : open -a '/Applications/WeChat.app'
 alt - p : open -a '/Applications/Poe.app'
 alt - o : open -a '/Applications/Obsidian.app'

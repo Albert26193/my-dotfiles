@@ -224,6 +224,14 @@ if.window-title-regex-substring = '(阿里云盘)'
 run = ['move-node-to-workspace 7']
 
 [[on-window-detected]]
+if.app-id = 'is.follow'
+run = ['move-node-to-workspace 7']
+
+[[on-window-detected]]
+if.app-id = 'com.tencent.qqchschessformac'
+run = ['move-node-to-workspace 7']
+
+[[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = ['move-node-to-workspace 8']
 
